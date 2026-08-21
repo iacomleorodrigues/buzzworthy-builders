@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo-white.png.asset.json";
 import mark from "@/assets/mark.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -165,11 +166,51 @@ function Index() {
       </main>
 
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-10 text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          <img src={mark.url} alt="yedweb" className="h-6 w-6 object-contain" />
-          <span>© {new Date().getFullYear()} yedweb</span>
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
+          <Link to="/">
+            <img src={mark.url} alt="yedweb" className="h-6 w-6 object-contain" />
+          </Link>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+            <Link
+              to="/privacidade"
+              className="transition-colors hover:text-secondary"
+            >
+              Política de Privacidade
+            </Link>
+            <a
+              href="https://www.instagram.com/yedwebhub/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-secondary px-4 py-2 text-secondary transition-shadow hover:shadow-[var(--glow-blue)]"
+              aria-label="Instagram yedweb"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              Instagram
+            </a>
+          </div>
+
+          <span className="text-center text-xs tracking-[0.15em] text-muted-foreground">
+            © {new Date().getFullYear()} yedweb · Todos os direitos reservados
+          </span>
         </div>
       </footer>
+
     </div>
   );
 }
