@@ -86,4 +86,52 @@ function Privacy() {
             </h2>
             <p className="mt-3">
               Você pode solicitar acesso, correção, exclusão ou portabilidade dos seus dados a
-              qualquer momento. Para isso, envie um e-mail para{
+              qualquer momento. Para isso, envie um e-mail para{" "}
+              <a
+                href="mailto:contato@yedweb.com.br"
+                className="text-secondary underline underline-offset-4 transition-colors hover:text-primary"
+              >
+                contato@yedweb.com.br
+              </a>
+              .
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-lg font-bold tracking-wide text-foreground uppercase">
+              5. Segurança
+            </h2>
+            <p className="mt-3">
+              Adotamos medidas técnicas e organizacionais para proteger suas informações contra
+              acesso não autorizado, alteração, divulgação ou destruição. No entanto, nenhum sistema é
+              totalmente seguro, e não podemos garantir segurança absoluta.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-lg font-bold tracking-wide text-foreground uppercase">
+              6. Alterações nesta política
+            </h2>
+            <p className="mt-3">
+              Podemos atualizar esta política periodicamente. A data da última revisão será sempre
+              indicada ao final desta página. Recomendamos que você a consulte regularmente.
+            </p>
+          </section>
+
+          <p className="pt-4 text-xs text-muted-foreground">
+            Última atualização: agosto de 2026.
+          </p>
+        </div>
+      </main>
+
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-10 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+          <Link to="/">
+            <img src={mark.url} alt="yedweb" className="h-6 w-6 object-contain" />
+          </Link>
+          <span>© {new Date().getFullYear()} yedweb · Todos os direitos reservados</span>
+        </div>
+      </footer>
+    </div>
+  );
+}
