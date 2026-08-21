@@ -192,6 +192,100 @@
   );
 }
 
+/* Divisor "construído à mão": traços irregulares rosa/azul */
+@utility hand-rule {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--primary) 0px,
+    var(--primary) 14px,
+    transparent 14px,
+    transparent 22px,
+    var(--secondary) 22px,
+    var(--secondary) 30px,
+    transparent 30px,
+    transparent 46px
+  );
+  opacity: 0.7;
+}
+
+/* Cantos técnicos tipo HUD */
+@utility corner-frame {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+  }
+
+  &::after {
+    right: -1px;
+    bottom: -1px;
+    border-right: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+  }
+}
+
+@utility neon-btn {
+  position: relative;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-pink);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+
+
 
 
 .dark {
