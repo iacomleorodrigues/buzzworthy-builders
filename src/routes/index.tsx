@@ -46,53 +46,136 @@ const steps = [
 ];
 
 function Index() {
+  const revealRoot = useRevealOnScroll();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#servicos", label: "Serviços" },
+    { href: "#processo", label: "Processo" },
+    { href: "#contato", label: "Contato" },
+  ];
+
   return (
-    <div className="grain relative min-h-screen bg-background font-sans text-foreground antialiased">
+    <div
+      ref={revealRoot}
+      className="grain relative min-h-screen bg-background font-sans text-foreground antialiased"
+    >
       <header className="sticky top-0 z-30 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <img src={mark.url} alt="yedweb" className="h-7 w-7 object-contain" />
           <nav className="hidden items-center gap-10 text-xs tracking-[0.25em] text-muted-foreground uppercase md:flex">
-            <a href="#servicos" className="transition-colors hover:text-secondary">Serviços</a>
-            <a href="#processo" className="transition-colors hover:text-secondary">Processo</a>
-            <a href="#contato" className="transition-colors hover:text-secondary">Contato</a>
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href} className="transition-colors hover:text-secondary">
+                {l.label}
+              </a>
+            ))}
           </nav>
-          <a
-            href="#contato"
-            className="border border-primary px-5 py-2 text-xs tracking-[0.2em] text-primary uppercase transition-shadow hover:shadow-[var(--glow-pink)]"
-          >
-            Iniciar
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href="#contato"
+              className="neon-btn hidden border border-primary px-5 py-2 text-xs tracking-[0.2em] text-primary uppercase md:inline-flex"
+            >
+              Solicitar proposta
+            </a>
+            <button
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-expanded={menuOpen}
+              aria-controls="menu-mobile"
+              aria-label="Abrir menu"
+              className="inline-flex h-11 w-11 items-center justify-center border border-border text-secondary md:hidden"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" aria-hidden="true">
+                {menuOpen ? (
+                  <>
+                    <line x1="5" y1="5" x2="19" y2="19" />
+                    <line x1="19" y1="5" x2="5" y2="19" />
+                  </>
+                ) : (
+                  <>
+                    <line x1="3" y1="7" x2="21" y2="7" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="17" x2="21" y2="17" />
+                  </>
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
+        {menuOpen && (
+          <nav
+            id="menu-mobile"
+            className="border-t border-border bg-background md:hidden"
+            aria-label="Navegação principal"
+          >
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMenuOpen(false)}
+                className="block border-b border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase transition-colors hover:text-secondary"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        )}
       </header>
 
       <main>
         <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border">
-          <div className="relative z-[2] mx-auto max-w-6xl px-6 py-28 md:py-40">
-            <p className="mb-10 text-xs tracking-[0.4em] text-secondary uppercase glow-blue">
-              Agência digital · desde o primeiro pixel
+          <div className="relative z-[2] mx-auto max-w-6xl px-6 py-24 md:py-40">
+            <p
+              data-reveal
+              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
+            >
+              <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
+              Agência digital · high tech, low bullshit
             </p>
             <img
               src={logo.url}
               alt="Logotipo yedweb"
-              className="mb-14 w-60 object-contain md:w-80"
+              width={320}
+              height={96}
+              fetchPriority="high"
+              className="mb-12 w-52 object-contain md:w-80"
             />
-            <h1 className="max-w-3xl font-display text-4xl leading-[1.03] font-bold tracking-tight md:text-6xl">
+            <h1
+              data-reveal
+              className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
+            >
               Marca, site e mídia operando{" "}
               <span className="text-primary glow-pink">na mesma frequência</span>.
             </h1>
-            <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Presença digital completa: da estratégia à página publicada, do conteúdo diário à
-              mentoria do seu time.
-            </p>
-            <a
-              href="#contato"
-              className="mt-12 inline-flex bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)] transition-opacity hover:opacity-90"
+            <p
+              data-reveal
+              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              Solicitar proposta
-            </a>
+              Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
+              estratégia à página publicada, sem improviso e sem discurso vazio.
+            </p>
+            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#contato"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+              >
+                Solicitar proposta
+              </a>
+              <a
+                href="#servicos"
+                className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+              >
+                Ver serviços
+              </a>
+            </div>
+            <div data-reveal className="reveal hand-rule mt-14 max-w-md" aria-hidden />
+            <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              Resposta em até 1 dia útil · sem compromisso
+            </p>
           </div>
           <div className="circuit-line absolute bottom-0 left-0 h-px w-full" aria-hidden />
         </section>
+
 
         <section id="servicos" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-28">
