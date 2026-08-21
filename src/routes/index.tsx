@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import logo from "@/assets/logo-white.png.asset.json";
 import mark from "@/assets/mark.png.asset.json";
+import { useRevealOnScroll } from "@/hooks/use-reveal";
+
+
 
 
 export const Route = createFileRoute("/")({
