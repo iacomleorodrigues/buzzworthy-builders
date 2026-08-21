@@ -69,7 +69,7 @@ function Index() {
             <img
               src={logo.url}
               alt="Logotipo yedweb"
-              className="mb-14 w-60 object-contain drop-shadow-[0_0_30px_oklch(0.717_0.134_227.9/35%)] md:w-80"
+              className="mb-14 w-60 object-contain md:w-80"
             />
             <h1 className="max-w-3xl font-display text-4xl leading-[1.03] font-bold tracking-tight md:text-6xl">
               Marca, site e mídia operando{" "}
