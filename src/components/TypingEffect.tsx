@@ -33,6 +33,7 @@ export function TypingEffect({
       }, speed);
       return () => clearTimeout(timeout);
     }
+    return undefined;
   }, [displayedText, text, speed, started]);
 
   return (
