@@ -5,6 +5,7 @@ import mark from "@/assets/mark.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { useTextScramble } from "@/hooks/use-text-scramble";
+import { useMagnetic } from "@/hooks/use-magnetic";
 
 
 
@@ -97,6 +98,7 @@ function Index() {
   const revealRoot = useRevealOnScroll();
   const [menuOpen, setMenuOpen] = useState(false);
   const scrambledTitle = useTextScramble("na mesma frequência", 1.5, 0.5);
+  const heroCtaRef = useMagnetic(0.3);
 
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
@@ -208,7 +210,8 @@ function Index() {
             <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                ref={heroCtaRef as any}
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)] transition-transform duration-200 ease-out"
               >
                 Solicitar proposta
               </a>
