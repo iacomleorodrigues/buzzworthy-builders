@@ -393,7 +393,8 @@ function Index() {
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
               >
-                APLIQUE O EFEITO DE DIGITACAO
+                <TypingEffect text="Vamos tirar seu projeto" />{" "}
+                <span className="text-primary glow-pink">do papel</span>
               </h2>
               <p data-reveal className="reveal mt-6 leading-relaxed text-muted-foreground">
                 Cada mês sem uma operação digital afiada é faturamento indo para o concorrente.
