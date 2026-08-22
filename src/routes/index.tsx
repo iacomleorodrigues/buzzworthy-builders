@@ -194,23 +194,23 @@ function Index() {
             </h1>
             <p
               data-reveal
-              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              className="reveal mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
               Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
-              estratégia à página publicada, sem improviso e sem discurso vazio.
+              estratégia à página publicada.
             </p>
-            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div data-reveal className="reveal mt-12 flex flex-col gap-5 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-10 py-5 text-sm font-bold tracking-[0.2em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
               >
                 Solicitar proposta
               </a>
               <a
                 href="#servicos"
-                className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+                className="group inline-flex items-center justify-center border-b border-border/50 hover:border-secondary px-2 py-5 text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase transition-all hover:text-secondary"
               >
-                Ver serviços
+                Ver serviços <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
             <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
