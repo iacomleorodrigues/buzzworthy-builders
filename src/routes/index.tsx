@@ -232,20 +232,21 @@ function Index() {
               Marcas que já operam na mesma frequência
             </p>
             <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-              {clientLogos.map((l) => (
+              {clientLogos.map((l, i) => (
                 <li
                   key={l}
                   data-reveal
                   className="reveal border border-dashed border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase"
+                  style={{ transitionDelay: `${i * 100}ms` }}
                 >
-                  {l} [SUBSTITUIR]
+                  {l}
                 </li>
               ))}
             </ul>
 
             <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-              {metrics.map((m) => (
-                <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center">
+              {metrics.map((m, i) => (
+                <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center" style={{ transitionDelay: `${i * 150}ms` }}>
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
                     {m.v}
                   </p>
@@ -271,11 +272,12 @@ function Index() {
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
             </p>
             <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">
-              {services.map((s) => (
+              {services.map((s, i) => (
                 <article
                   key={s.n}
                   data-reveal
                   className="reveal group relative overflow-hidden bg-card p-9 transition-colors hover:bg-muted"
+                  style={{ transitionDelay: `${(i % 3) * 150}ms` }}
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
                   <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
@@ -323,6 +325,7 @@ function Index() {
                   key={i}
                   data-reveal
                   className="reveal corner-frame border border-border bg-card p-8 transition-colors hover:bg-muted"
+                  style={{ transitionDelay: `${i * 200}ms` }}
                 >
                   <blockquote className="text-sm leading-relaxed text-foreground/90">
                     “{t.quote}”
@@ -364,6 +367,7 @@ function Index() {
                   key={s.k}
                   data-reveal
                   className="reveal flex gap-8 border-b border-border pb-10 last:border-0"
+                  style={{ transitionDelay: `${i * 150}ms` }}
                 >
                   <span className="font-display text-2xl font-bold text-primary glow-pink">
                     {`0${i + 1}`}
