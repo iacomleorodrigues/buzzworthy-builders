@@ -272,11 +272,12 @@ function Index() {
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
             </p>
             <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">
-              {services.map((s) => (
+              {services.map((s, i) => (
                 <article
                   key={s.n}
                   data-reveal
                   className="reveal group relative overflow-hidden bg-card p-9 transition-colors hover:bg-muted"
+                  style={{ transitionDelay: `${(i % 3) * 150}ms` }}
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
                   <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
