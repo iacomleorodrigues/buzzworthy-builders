@@ -45,19 +45,8 @@ export function CyberSphere() {
         </Sphere>
       </Float>
 
-      {/* Floating particles/bits */}
-      {Array.from({ length: 20 }).map((_, i) => (
-        <Float key={i} speed={Math.random() * 5} position={[
-          (Math.random() - 0.5) * 6,
-          (Math.random() - 0.5) * 6,
-          (Math.random() - 0.5) * 6
-        ]}>
-          <mesh>
-            <boxGeometry args={[0.05, 0.05, 0.05]} />
-            <meshBasicMaterial color={i % 2 === 0 ? "#d5066f" : "#1fb3e5"} />
-          </mesh>
-        </Float>
-      ))}
+      {/* Floating particles/bits removed per request */}
+
     </>
   );
 }
