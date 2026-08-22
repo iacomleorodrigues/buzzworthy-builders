@@ -92,7 +92,8 @@ const testimonials = [
     quote: "A YedWeb conseguiu transformar uma ideia solta em uma operação digital muito mais profissional. O novo site deixou nossa proposta mais clara, melhorou a percepção da marca e começou a gerar oportunidades mais qualificadas.", 
     name: "Julio Siqueira", 
 
-    role: "[SUBSTITUIR — cargo / empresa]" 
+    role: "CEO / A. S. LOCAÇÕES" 
+
   },
   { quote: "O que mais gostei foi a visão estratégica. Não recebemos apenas anúncios ou peças bonitas: entendemos o que precisava mudar na oferta, na página e no funil. Isso fez diferença direta na qualidade dos leads e nas vendas.", name: "Maria C. Almeida", role: "[SUBSTITUIR — cargo / empresa]" },
   { quote: "Já tínhamos trabalhado com outras agências, mas sempre faltava alguém conectando todas as pontas. Com a YedWeb, estratégia, design, conteúdo e execução falam a mesma língua. Hoje nossa presença digital representa muito melhor o nível da empresa.", name: "Fernando R. Ferrari", role: "[SUBSTITUIR — cargo / empresa]" },
