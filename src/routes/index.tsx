@@ -6,6 +6,7 @@ import logoMark from "@/assets/logo-mark.png.asset.json";
 import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { CountUp } from "@/components/CountUp";
 
 
 
@@ -231,7 +232,7 @@ function Index() {
               {metrics.map((m, i) => (
                 <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center transition-all duration-300 hover:bg-muted/40 hover:scale-[1.02] cursor-default" style={{ transitionDelay: `${i * 150}ms` }}>
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
-                    {m.v}
+                    <CountUp end={m.v} />
                   </p>
                   <p className="mt-3 text-xs tracking-[0.25em] text-muted-foreground uppercase">
                     {m.k}
