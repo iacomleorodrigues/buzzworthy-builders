@@ -199,7 +199,9 @@ function Index() {
       <main>
         <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
           <ClientOnlySphere />
-          <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
+          <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+
 
             <p
               data-reveal
@@ -222,7 +224,15 @@ function Index() {
               Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
               estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
-            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
+            </div>
+            <div className="relative hidden md:flex aspect-square items-center justify-center">
+              <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
+              {/* Espaço para elemento visual 3D */}
+              <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
+                quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
+              </div>
+            </div>
+
               <a
                 href="#contato"
                 className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
