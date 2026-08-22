@@ -213,12 +213,6 @@ function Index() {
               >
                 Solicitar proposta
               </a>
-              <a
-                href="#servicos"
-                className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
-              >
-                Ver serviços
-              </a>
             </div>
             <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
               Resposta em até 1 dia útil · sem compromisso
