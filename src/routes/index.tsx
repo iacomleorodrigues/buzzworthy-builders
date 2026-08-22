@@ -5,7 +5,26 @@ import logoMark from "@/assets/logo-mark.png.asset.json";
 import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { Suspense, lazy } from "react";
+const CyberSphereCanvas = lazy(() => import("@/components/CyberSphere").then(mod => ({
+  default: () => (
+    <div className="absolute inset-0 z-0">
+      <Suspense fallback={null}>
+        <div className="h-full w-full opacity-60">
+          {/* @ts-ignore */}
+          <import.meta.env.VITE_CLIENT_ONLY>
+            <Canvas>
+              <mod.CyberSphere />
+            </Canvas>
+          </import.meta.env.VITE_CLIENT_ONLY>
+        </div>
+      </Suspense>
+    </div>
+  )
+})));
 
+// Standard import won't work for Canvas due to SSR, we'll use a local helper
+import { Canvas } from "@react-three/fiber";
 
 
 
