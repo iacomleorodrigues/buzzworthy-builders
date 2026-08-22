@@ -56,24 +56,34 @@ export function TypingEffect({
   }, [displayedText, text, speed, started]);
 
   const renderText = () => {
-    const targetString = "na mesma frequência";
-    if (!text.includes(targetString)) {
+    const targetString = "mesma frequência";
+    const highlightTrigger = "na " + targetString;
+    
+    if (!text.includes(highlightTrigger)) {
       return displayedText;
     }
 
-    const parts = text.split(targetString);
+    const parts = text.split(highlightTrigger);
     const beforeText = parts[0] || "";
-    const targetText = targetString;
     
     let currentLength = 0;
     
     const beforeSegment = displayedText.slice(0, Math.min(displayedText.length, beforeText.length));
     currentLength += beforeText.length;
 
-    const targetSegment = displayedText.length > currentLength 
-      ? displayedText.slice(currentLength, Math.min(displayedText.length, currentLength + targetText.length))
+    // "na " part (should be white/normal)
+    const naText = "na ";
+    const naSegment = displayedText.length > currentLength
+      ? displayedText.slice(currentLength, Math.min(displayedText.length, currentLength + naText.length))
       : "";
-    currentLength += targetText.length;
+    currentLength += naText.length;
+
+    // "mesma frequência" part (pink)
+    const pinkText = targetString;
+    const pinkSegment = displayedText.length > currentLength
+      ? displayedText.slice(currentLength, Math.min(displayedText.length, currentLength + pinkText.length))
+      : "";
+    currentLength += pinkText.length;
 
     const afterSegment = displayedText.length > currentLength
       ? displayedText.slice(currentLength)
@@ -82,8 +92,9 @@ export function TypingEffect({
     return (
       <>
         {beforeSegment}
-        {targetSegment && (
-          <span className="text-primary glow-pink">{targetSegment}</span>
+        {naSegment}
+        {pinkSegment && (
+          <span className="text-primary glow-pink">{pinkSegment}</span>
         )}
         {afterSegment}
       </>
