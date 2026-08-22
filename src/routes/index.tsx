@@ -176,7 +176,7 @@ function Index() {
 
       <main>
         <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border">
-          <div className="relative z-[2] mx-auto max-w-6xl px-6 py-24 md:py-40">
+          <div className="relative z-[2] mx-auto max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
               className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
