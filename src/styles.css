@@ -159,18 +159,18 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(
-      circle at 20% 30%,
-      oklch(0.566 0.227 0.7 / 8%) 0%,
+      circle at 30% 20%,
+      oklch(0.566 0.227 0.7 / 15%) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle at 80% 70%,
-      oklch(0.717 0.134 227.9 / 8%) 0%,
+      circle at 70% 80%,
+      oklch(0.717 0.134 227.9 / 15%) 0%,
       transparent 50%
     );
-    filter: blur(80px);
+    filter: blur(100px);
     z-index: -1;
-    animation: mesh-move 30s ease-in-out infinite alternate;
+    animation: mesh-move 20s ease-in-out infinite alternate;
     pointer-events: none;
   }
 }
