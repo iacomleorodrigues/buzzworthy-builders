@@ -176,7 +176,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[90vh] flex items-center">
+        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
@@ -187,30 +187,30 @@ function Index() {
             </p>
             <h1
               data-reveal
-              className="reveal max-w-4xl font-display text-[2.8rem] leading-[1] font-bold tracking-tight sm:text-6xl md:text-8xl"
+              className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
               Marca, site e mídia operando{" "}
-              <span className="text-primary glow-pink inline-block min-w-[8ch]">na mesma frequência.</span>
+              <span className="text-primary glow-pink inline-block min-w-[8ch]">na mesma frequência</span>.
             </h1>
             <p
               data-reveal
-              className="reveal mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl"
+              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
               Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
-              estratégia à página publicada.
+              estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
-            <div data-reveal className="reveal mt-12 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-10 py-5 text-sm font-bold tracking-[0.2em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
               >
                 Solicitar proposta
               </a>
               <a
                 href="#servicos"
-                className="group inline-flex items-center justify-center border-b border-border/50 hover:border-secondary px-2 py-5 text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase transition-all hover:text-secondary"
+                className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
               >
-                Ver serviços <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                Ver serviços
               </a>
             </div>
             <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">

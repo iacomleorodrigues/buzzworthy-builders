@@ -132,26 +132,25 @@
     content: "";
     position: absolute;
     inset: auto 0 0 0;
-    height: 100%;
+    height: 70%;
     background-image:
       linear-gradient(
         to right,
-        color-mix(in oklab, var(--primary) 15%, transparent) 1px,
+        color-mix(in oklab, var(--primary) 25%, transparent) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        color-mix(in oklab, var(--primary) 15%, transparent) 1px,
+        color-mix(in oklab, var(--primary) 20%, transparent) 1px,
         transparent 1px
       );
-    background-size: 80px 80px;
-    transform: perspective(600px) rotateX(60deg);
-    transform-origin: center bottom;
-    mask-image: linear-gradient(to top, black 10%, transparent 90%);
-    opacity: 0.6;
+    background-size: 72px 72px;
+    transform: perspective(340px) rotateX(70deg);
+    transform-origin: bottom center;
+    mask-image: linear-gradient(to top, black, transparent 85%);
+    opacity: 0.3;
     z-index: -2;
     pointer-events: none;
-    animation: grid-scroll 15s linear infinite;
   }
 
   &::after {
@@ -159,18 +158,18 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(
-      circle at 30% 20%,
-      oklch(0.566 0.227 0.7 / 15%) 0%,
+      circle at 20% 30%,
+      oklch(0.566 0.227 0.7 / 8%) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle at 70% 80%,
-      oklch(0.717 0.134 227.9 / 15%) 0%,
+      circle at 80% 70%,
+      oklch(0.717 0.134 227.9 / 8%) 0%,
       transparent 50%
     );
-    filter: blur(100px);
+    filter: blur(80px);
     z-index: -1;
-    animation: mesh-move 20s ease-in-out infinite alternate;
+    animation: mesh-move 30s ease-in-out infinite alternate;
     pointer-events: none;
   }
 }
@@ -178,11 +177,6 @@
 @keyframes mesh-move {
   0% { transform: translate(0, 0) scale(1); }
   100% { transform: translate(5%, 5%) scale(1.1); }
-}
-
-@keyframes grid-scroll {
-  from { background-position: 0 0; }
-  to { background-position: 0 80px; }
 }
 
 @utility scanlines {
