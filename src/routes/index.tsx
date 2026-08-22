@@ -109,7 +109,9 @@ function Index() {
     >
       <header className="sticky top-0 z-30 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block">
+            <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+          </a>
           <nav className="hidden items-center gap-10 text-xs tracking-[0.25em] text-muted-foreground uppercase md:flex">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="transition-colors hover:text-secondary">
