@@ -224,23 +224,7 @@ function Index() {
         {/* Prova social — logos + números */}
         <section className="border-b border-border" aria-label="Prova social">
           <div className="mx-auto max-w-6xl px-6 py-16">
-            <p className="text-center text-xs tracking-[0.35em] text-muted-foreground uppercase">
-              Marcas que já operam na mesma frequência
-            </p>
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-              {clientLogos.map((l, i) => (
-                <li
-                  key={l}
-                  data-reveal
-                  className="reveal border border-dashed border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase"
-                  style={{ transitionDelay: `${i * 100}ms` }}
-                >
-                  {l}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-4 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
               {metrics.map((m, i) => (
                 <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center transition-all duration-300 hover:bg-muted/40 hover:scale-[1.02] cursor-default" style={{ transitionDelay: `${i * 150}ms` }}>
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
