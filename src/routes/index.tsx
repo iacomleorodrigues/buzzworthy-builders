@@ -78,7 +78,7 @@ const steps = [
 
 const metrics = [
   { v: "+137", k: "Projetos entregues" },
-  { v: "[SUBSTITUIR]", k: "Aumento médio de conversão" },
+  { v: "+83%", k: "Aumento médio de conversão" },
   { v: "07", k: "Anos de estrada" },
   { v: "[SUBSTITUIR]", k: "Clientes ativos" },
 ];
