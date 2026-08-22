@@ -325,6 +325,7 @@ function Index() {
                   key={i}
                   data-reveal
                   className="reveal corner-frame border border-border bg-card p-8 transition-colors hover:bg-muted"
+                  style={{ transitionDelay: `${i * 200}ms` }}
                 >
                   <blockquote className="text-sm leading-relaxed text-foreground/90">
                     “{t.quote}”
