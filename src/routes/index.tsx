@@ -16,17 +16,19 @@ const ClientOnlySphere = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <Suspense fallback={null}>
         <div className="h-full w-full opacity-60">
-          <Canvas>
+          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
             <CyberSphere />
           </Canvas>
         </div>
       </Suspense>
+
     </div>
   );
 };
+
 
 
 
@@ -197,8 +199,9 @@ function Index() {
       </header>
 
       <main>
-        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
+        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center pt-24 md:pt-32">
           <ClientOnlySphere />
+
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p
@@ -243,15 +246,39 @@ function Index() {
             
             <div className="relative hidden md:flex aspect-square items-center justify-center">
               <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
-            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-              quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
-              <Suspense fallback={null}>
-                <CyberSphere />
-              </Suspense>
+            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-[0.6rem] leading-relaxed tracking-[0.1em] text-muted-foreground uppercase px-4">
+              <div className="max-w-[300px] break-words">
+                For the code present, I get the error below.
+                <br /><br />
+                Please think step-by-step in order to resolve it.
+                <br />
+                {"```"}
+                <br />
+                R3F: Hooks can only be used within the Canvas component!
+                <br /><br />
+                {"{"}
+                <br />
+                &nbsp;&nbsp;"timestamp": 1787390032239,
+                <br />
+                &nbsp;&nbsp;"error_type": "RUNTIME_ERROR",
+                <br />
+                &nbsp;&nbsp;"filename": "/",
+                <br />
+                &nbsp;&nbsp;"lineno": 0,
+                <br />
+                &nbsp;&nbsp;"colno": 0,
+                <br />
+                &nbsp;&nbsp;"stack": "Error: R3F: Hooks can only be used within the Canvas component!...",
+                <br />
+                &nbsp;&nbsp;"has_blank_screen": true
+                <br />
+                {"}"}
+                <br />
+                {"```"}
+              </div>
             </div>
+          </div>
 
-
-            </div>
           </div>
           <div className="circuit-line absolute bottom-0 left-0 h-px w-full" aria-hidden />
         </section>

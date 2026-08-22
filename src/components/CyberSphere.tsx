@@ -16,7 +16,7 @@ export function CyberSphere() {
 
   return (
     <>
-      <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={45} />
+      {/* Câmera configurada via props no Canvas */}
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} color="#d5066f" />
       <pointLight position={[-10, -10, -10]} intensity={1} color="#1fb3e5" />
