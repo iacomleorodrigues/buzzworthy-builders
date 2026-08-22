@@ -90,7 +90,8 @@ const metrics = [
 const testimonials = [
   { 
     quote: "A YedWeb conseguiu transformar uma ideia solta em uma operação digital muito mais profissional. O novo site deixou nossa proposta mais clara, melhorou a percepção da marca e começou a gerar oportunidades mais qualificadas.", 
-    name: "[SUBSTITUIR — nome]", 
+    name: "Julio Siqueira", 
+
     role: "[SUBSTITUIR — cargo / empresa]" 
   },
   { quote: "O que mais gostei foi a visão estratégica. Não recebemos apenas anúncios ou peças bonitas: entendemos o que precisava mudar na oferta, na página e no funil. Isso fez diferença direta na qualidade dos leads e nas vendas.", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
