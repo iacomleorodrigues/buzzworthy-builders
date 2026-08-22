@@ -262,6 +262,30 @@
   }
 }
 
+@utility spotlight-card {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      600px circle at var(--x) var(--y),
+      oklch(0.717 0.134 227.9 / 8%),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
 @utility neon-btn {
   position: relative;
   transition:
