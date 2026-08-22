@@ -183,14 +183,6 @@ function Index() {
               <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
               Agência digital · high tech, low bullshit
             </p>
-            <img
-              src={logo.url}
-              alt="Logotipo yedweb"
-              width={320}
-              height={96}
-              fetchPriority="high"
-              className="mb-12 w-52 object-contain md:w-80"
-            />
             <h1
               data-reveal
               className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
