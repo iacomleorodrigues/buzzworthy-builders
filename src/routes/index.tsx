@@ -204,7 +204,7 @@ function Index() {
               data-reveal
               className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              Fix build
+              Presença digital construída para atrair mais clientes e aumentar seu faturamento, da estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
             <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
