@@ -367,6 +367,7 @@ function Index() {
                   key={s.k}
                   data-reveal
                   className="reveal flex gap-8 border-b border-border pb-10 last:border-0"
+                  style={{ transitionDelay: `${i * 150}ms` }}
                 >
                   <span className="font-display text-2xl font-bold text-primary glow-pink">
                     {`0${i + 1}`}
