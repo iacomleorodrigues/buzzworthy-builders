@@ -1,10 +1,32 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
+
 import logo from "@/assets/yw.png.asset.json";
 import logoMark from "@/assets/logo-mark.png.asset.json";
 import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { Canvas } from "@react-three/fiber";
+
+
+const CyberSphere = lazy(() => import("@/components/CyberSphere").then(mod => ({ default: mod.CyberSphere })));
+
+const ClientOnlySphere = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  return (
+    <div className="absolute inset-0 z-0">
+      <Suspense fallback={null}>
+        <div className="h-full w-full opacity-60">
+          <Canvas>
+            <CyberSphere />
+          </Canvas>
+        </div>
+      </Suspense>
+    </div>
+  );
+};
 
 
 
@@ -175,50 +197,65 @@ function Index() {
       </header>
 
       <main>
-        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border">
-          <div className="relative z-[2] mx-auto max-w-6xl px-6 py-12 md:py-24">
-            <p
-              data-reveal
-              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
-            >
-              <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
-              Agência digital · high tech, low bullshit
-            </p>
-            <h1
-              data-reveal
-              className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
-            >
-              Marca, site e mídia operando{" "}
-              <span className="text-primary glow-pink inline-block min-w-[8ch]">na mesma frequência</span>.
-            </h1>
-            <p
-              data-reveal
-              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
-            >
-              Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
-              estratégia à página publicada, sem improviso e sem discurso vazio.
-            </p>
-            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
+          <ClientOnlySphere />
+          <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p
+                data-reveal
+                className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
               >
-                Solicitar proposta
-              </a>
-              <a
-                href="#servicos"
-                className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+                <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
+                Agência digital · high tech, low bullshit
+              </p>
+              <h1
+                data-reveal
+                className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
               >
-                Ver serviços
-              </a>
+                Marca, site e mídia operando{" "}
+                <span className="text-primary glow-pink inline-block min-w-[8ch]">na mesma frequência</span>.
+              </h1>
+              <p
+                data-reveal
+                className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              >
+                Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
+                estratégia à página publicada, sem improviso e sem discurso vazio.
+              </p>
+              <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#contato"
+                  className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                >
+                  Solicitar proposta
+                </a>
+                <a
+                  href="#servicos"
+                  className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+                >
+                  Ver serviços
+                </a>
+              </div>
+              <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+                Resposta em até 1 dia útil · sem compromisso
+              </p>
             </div>
             
-            <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
-              Resposta em até 1 dia útil · sem compromisso
-            </p>
+            <div className="relative hidden md:flex aspect-square items-center justify-center">
+              <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
+            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
+              <Suspense fallback={null}>
+                <CyberSphere />
+              </Suspense>
+            </div>
+
+
+            </div>
           </div>
           <div className="circuit-line absolute bottom-0 left-0 h-px w-full" aria-hidden />
         </section>
+
 
         {/* Prova social — logos + números */}
         <section className="border-b border-border" aria-label="Prova social">
