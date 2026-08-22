@@ -81,7 +81,7 @@ const metrics = [
   { v: "+137", k: "Projetos entregues" },
   { v: "+83%", k: "Aumento médio de conversão" },
   { v: "07", k: "Anos de estrada" },
-  { v: "[SUBSTITUIR]", k: "Clientes ativos" },
+  { v: "+R$2MM", k: "RESULTADOS" },
 ];
 
 const testimonials = [
