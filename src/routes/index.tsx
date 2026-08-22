@@ -198,8 +198,7 @@ function Index() {
               data-reveal
               className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Marca, site e mídia operando{" "}
-              <span className="text-primary glow-pink inline-block min-w-[8ch]">na mesma frequência</span>.
+              <TypingEffect text="Marca, site e mídia operando na mesma frequência." />
             </h1>
             <p
               data-reveal
