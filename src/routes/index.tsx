@@ -393,7 +393,7 @@ function Index() {
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
               >
-                Vamos tirar seu projeto{" "}
+                <TypingEffect text="Vamos tirar seu projeto" />{" "}
                 <span className="text-primary glow-pink">do papel</span>
               </h2>
               <p data-reveal className="reveal mt-6 leading-relaxed text-muted-foreground">
