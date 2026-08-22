@@ -257,7 +257,7 @@ function Index() {
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
             >
-              O que fazemos
+              <TypingEffect text="O que fazemos" />
             </h2>
             <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
