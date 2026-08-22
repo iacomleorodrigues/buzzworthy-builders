@@ -176,7 +176,7 @@ function Index() {
       </header>
 
       <main>
-        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
+        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[90vh] flex items-center">
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
