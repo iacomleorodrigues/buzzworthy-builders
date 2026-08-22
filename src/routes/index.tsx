@@ -432,7 +432,7 @@ function Index() {
       <footer className="border-t border-border pb-20 md:pb-0">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
           <Link to="/">
-            <img src={mark.url} alt="yedweb" className="h-6 w-6 object-contain" />
+            <img src={logoMark.url} alt="yedweb" className="h-6 w-6 object-contain" />
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.2em] text-muted-foreground uppercase">
