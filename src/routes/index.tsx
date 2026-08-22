@@ -224,6 +224,9 @@ function Index() {
         {/* Prova social — logos + números */}
         <section className="border-b border-border" aria-label="Prova social">
           <div className="mx-auto max-w-6xl px-6 py-16">
+            <h2 data-reveal className="reveal mb-12 text-center font-display text-2xl font-bold tracking-tight md:text-4xl">
+              Nossos números
+            </h2>
             <div className="mt-4 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
               {metrics.map((m, i) => (
                 <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center transition-all duration-300 hover:bg-muted/40 hover:scale-[1.02] cursor-default" style={{ transitionDelay: `${i * 150}ms` }}>
