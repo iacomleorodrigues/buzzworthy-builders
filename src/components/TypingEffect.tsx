@@ -18,11 +18,12 @@ export function TypingEffect({
   const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
+    let timer: ReturnType<typeof setTimeout> | undefined;
     
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
           timer = setTimeout(() => {
             setStarted(true);
           }, delay);
