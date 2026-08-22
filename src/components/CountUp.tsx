@@ -12,10 +12,11 @@ export function CountUp({ end, duration = 2000 }: CountUpProps) {
 
   // Parse the number from the string (e.g., "+137" -> 137, "+83%" -> 83, "+R$2MM" -> 2)
   const numericMatch = end.match(/\d+/);
-  const target = numericMatch ? parseInt(numericMatch[0], 10) : 0;
+  const numericValue = numericMatch ? numericMatch[0] : '';
+  const target = numericValue ? parseInt(numericValue, 10) : 0;
   
-  const prefix = end.split(numericMatch?.[0] || '')[0] || '';
-  const suffix = end.split(numericMatch?.[0] || '')[1] || '';
+  const prefix = end.split(numericValue)[0] || '';
+  const suffix = end.split(numericValue)[1] || '';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
