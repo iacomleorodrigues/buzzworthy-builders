@@ -17,9 +17,10 @@ export function CyberSphere() {
   return (
     <>
       {/* Câmera configurada via props no Canvas */}
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1} color="#d5066f" />
-      <pointLight position={[-10, -10, -10]} intensity={1} color="#1fb3e5" />
+      <ambientLight intensity={1.5} />
+      <pointLight position={[10, 10, 10]} intensity={2} color="#d5066f" />
+      <pointLight position={[-10, -10, -10]} intensity={2} color="#1fb3e5" />
+
       
       <Float speed={2} rotationIntensity={1} floatIntensity={1}>
         <Sphere ref={sphereRef} args={[1, 64, 64]} scale={1.5}>
