@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface TypingEffectProps {
   text: string;
@@ -15,13 +15,32 @@ export function TypingEffect({
 }: TypingEffectProps) {
   const [displayedText, setDisplayedText] = useState("");
   const [started, setStarted] = useState(false);
+  const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setStarted(true);
-    }, delay);
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
+          timer = setTimeout(() => {
+            setStarted(true);
+          }, delay);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-    return () => clearTimeout(timer);
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+      if (timer) clearTimeout(timer);
+    };
   }, [delay]);
 
   useEffect(() => {
@@ -37,7 +56,7 @@ export function TypingEffect({
   }, [displayedText, text, speed, started]);
 
   return (
-    <span className={className}>
+    <span ref={elementRef} className={className}>
       {displayedText}
       {started && displayedText.length < text.length && (
         <span className="inline-block w-[2px] h-[1em] bg-primary ml-1 animate-pulse align-middle" />
