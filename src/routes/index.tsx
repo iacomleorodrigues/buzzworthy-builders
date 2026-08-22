@@ -6,8 +6,8 @@ import logoMark from "@/assets/logo-mark.png.asset.json";
 import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
-import { Suspense, lazy, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
+
 
 const CyberSphere = lazy(() => import("@/components/CyberSphere").then(mod => ({ default: mod.CyberSphere })));
 
