@@ -4,6 +4,7 @@ import logo from "@/assets/yw.png.asset.json";
 import mark from "@/assets/mark.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { useTextScramble } from "@/hooks/use-text-scramble";
 
 
 
@@ -95,6 +96,7 @@ const clientLogos = ["[LOGO 1]", "[LOGO 2]", "[LOGO 3]", "[LOGO 4]", "[LOGO 5]"]
 function Index() {
   const revealRoot = useRevealOnScroll();
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrambledTitle = useTextScramble("na mesma frequência", 1.5, 0.5);
 
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
@@ -194,7 +196,7 @@ function Index() {
               className="reveal max-w-3xl font-display text-[2.1rem] leading-[1.05] font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
               Marca, site e mídia operando{" "}
-              <span className="text-primary glow-pink">na mesma frequência</span>.
+              <span className="text-primary glow-pink inline-block min-w-[8ch]">{scrambledTitle}</span>.
             </h1>
             <p
               data-reveal
