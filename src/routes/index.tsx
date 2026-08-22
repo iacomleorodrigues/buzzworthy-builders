@@ -243,10 +243,12 @@ function Index() {
             
             <div className="relative hidden md:flex aspect-square items-center justify-center">
               <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
-              {/* Espaço para elemento visual 3D */}
-              <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-                quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
-              </div>
+            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              <Suspense fallback={null}>
+                <CyberSphere />
+              </Suspense>
+            </div>
+
             </div>
           </div>
           <div className="circuit-line absolute bottom-0 left-0 h-px w-full" aria-hidden />
