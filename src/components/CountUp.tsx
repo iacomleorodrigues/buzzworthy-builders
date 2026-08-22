@@ -21,7 +21,7 @@ export function CountUp({ end, duration = 2000 }: CountUpProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !hasStarted) {
+        if (entries[0]?.isIntersecting && !hasStarted) {
           setHasStarted(true);
         }
       },
