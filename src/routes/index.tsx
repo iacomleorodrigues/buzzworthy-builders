@@ -88,7 +88,11 @@ const metrics = [
 ];
 
 const testimonials = [
-  { quote: "[SUBSTITUIR — depoimento do cliente]", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
+  { 
+    quote: "A YedWeb conseguiu transformar uma ideia solta em uma operação digital muito mais profissional. O novo site deixou nossa proposta mais clara, melhorou a percepção da marca e começou a gerar oportunidades mais qualificadas.", 
+    name: "[SUBSTITUIR — nome]", 
+    role: "[SUBSTITUIR — cargo / empresa]" 
+  },
   { quote: "[SUBSTITUIR — depoimento do cliente]", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
   { quote: "[SUBSTITUIR — depoimento do cliente]", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
 ];
