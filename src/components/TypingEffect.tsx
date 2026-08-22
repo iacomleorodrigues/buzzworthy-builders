@@ -56,24 +56,24 @@ export function TypingEffect({
   }, [displayedText, text, speed, started]);
 
   const renderText = () => {
-    if (!text.includes("na mesma frequência")) {
+    const targetString = "na mesma frequência";
+    if (!text.includes(targetString)) {
       return displayedText;
     }
 
-    const parts = text.split("na mesma frequência");
-    const before = parts[0];
-    const target = "na mesma frequência";
-    const after = parts[1];
-
+    const parts = text.split(targetString);
+    const beforeText = parts[0] || "";
+    const targetText = targetString;
+    
     let currentLength = 0;
     
-    const beforeSegment = before ? displayedText.slice(0, before.length) : "";
-    currentLength += before.length;
+    const beforeSegment = displayedText.slice(0, Math.min(displayedText.length, beforeText.length));
+    currentLength += beforeText.length;
 
     const targetSegment = displayedText.length > currentLength 
-      ? displayedText.slice(currentLength, currentLength + target.length)
+      ? displayedText.slice(currentLength, Math.min(displayedText.length, currentLength + targetText.length))
       : "";
-    currentLength += target.length;
+    currentLength += targetText.length;
 
     const afterSegment = displayedText.length > currentLength
       ? displayedText.slice(currentLength)
