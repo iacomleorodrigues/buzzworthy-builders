@@ -232,20 +232,21 @@ function Index() {
               Marcas que já operam na mesma frequência
             </p>
             <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-              {clientLogos.map((l) => (
+              {clientLogos.map((l, i) => (
                 <li
                   key={l}
                   data-reveal
                   className="reveal border border-dashed border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase"
+                  style={{ transitionDelay: `${i * 100}ms` }}
                 >
-                  {l} [SUBSTITUIR]
+                  {l}
                 </li>
               ))}
             </ul>
 
             <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-              {metrics.map((m) => (
-                <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center">
+              {metrics.map((m, i) => (
+                <div key={m.k} data-reveal className="reveal bg-card px-8 py-10 text-center" style={{ transitionDelay: `${i * 150}ms` }}>
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
                     {m.v}
                   </p>
