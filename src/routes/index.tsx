@@ -93,7 +93,7 @@ const testimonials = [
     name: "[SUBSTITUIR — nome]", 
     role: "[SUBSTITUIR — cargo / empresa]" 
   },
-  { quote: "[SUBSTITUIR — depoimento do cliente]", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
+  { quote: "O que mais gostei foi a visão estratégica. Não recebemos apenas anúncios ou peças bonitas: entendemos o que precisava mudar na oferta, na página e no funil. Isso fez diferença direta na qualidade dos leads e nas vendas.", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
   { quote: "[SUBSTITUIR — depoimento do cliente]", name: "[SUBSTITUIR — nome]", role: "[SUBSTITUIR — cargo / empresa]" },
 ];
 
