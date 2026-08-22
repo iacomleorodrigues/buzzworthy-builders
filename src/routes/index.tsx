@@ -7,6 +7,8 @@ import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { CountUp } from "@/components/CountUp";
+import { TypingEffect } from "@/components/TypingEffect";
+
 
 
 
@@ -255,7 +257,7 @@ function Index() {
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
             >
-              O que fazemos
+              <TypingEffect text="O que fazemos" />
             </h2>
             <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
