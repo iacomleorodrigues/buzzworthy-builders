@@ -224,15 +224,7 @@ function Index() {
               Presença digital construída para atrair mais clientes e aumentar seu faturamento — da
               estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
-            </div>
-            <div className="relative hidden md:flex aspect-square items-center justify-center">
-              <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
-              {/* Espaço para elemento visual 3D */}
-              <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-                quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
-              </div>
-            </div>
-
+            <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
                 className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
@@ -246,6 +238,16 @@ function Index() {
                 Ver serviços
               </a>
             </div>
+          </div>
+          <div className="relative hidden md:flex aspect-square items-center justify-center">
+            <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
+            {/* Espaço para elemento visual 3D */}
+            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
+            </div>
+          </div>
+        </div>
+
             
             <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
               Resposta em até 1 dia útil · sem compromisso
