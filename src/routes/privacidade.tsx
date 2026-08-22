@@ -28,7 +28,7 @@ function Privacy() {
       <header className="sticky top-0 z-30 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link to="/">
-            <img src={mark.url} alt="yedweb" className="h-7 w-7 object-contain" />
+            <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
           </Link>
           <Link
             to="/"
@@ -127,7 +127,7 @@ function Privacy() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-10 text-xs tracking-[0.2em] text-muted-foreground uppercase">
           <Link to="/">
-            <img src={mark.url} alt="yedweb" className="h-6 w-6 object-contain" />
+            <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
           </Link>
           <span>© {new Date().getFullYear()} yedweb · Todos os direitos reservados</span>
         </div>
