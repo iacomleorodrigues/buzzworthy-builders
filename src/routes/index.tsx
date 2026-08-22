@@ -393,8 +393,7 @@ function Index() {
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
               >
-                <TypingEffect text="Vamos tirar seu projeto" />{" "}
-                <span className="text-primary glow-pink">do papel</span>
+                <TypingEffect text="Vamos tirar seu projeto do papel" />
               </h2>
               <p data-reveal className="reveal mt-6 leading-relaxed text-muted-foreground">
                 Cada mês sem uma operação digital afiada é faturamento indo para o concorrente.
