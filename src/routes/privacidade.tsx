@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import mark from "@/assets/mark.png.asset.json";
+import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
@@ -28,7 +29,7 @@ function Privacy() {
       <header className="sticky top-0 z-30 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link to="/">
-            <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+            <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </Link>
           <Link
             to="/"
@@ -127,7 +128,7 @@ function Privacy() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-10 text-xs tracking-[0.2em] text-muted-foreground uppercase">
           <Link to="/">
-            <img src={mark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+            <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </Link>
           <span>© {new Date().getFullYear()} yedweb · Todos os direitos reservados</span>
         </div>
