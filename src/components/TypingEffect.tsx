@@ -18,14 +18,15 @@ export function TypingEffect({
   const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          const timer = setTimeout(() => {
+          timer = setTimeout(() => {
             setStarted(true);
           }, delay);
           observer.disconnect();
-          return () => clearTimeout(timer);
         }
       },
       { threshold: 0.1 }
@@ -35,7 +36,10 @@ export function TypingEffect({
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (timer) clearTimeout(timer);
+    };
   }, [delay]);
 
   useEffect(() => {
