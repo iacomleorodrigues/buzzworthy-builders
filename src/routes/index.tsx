@@ -365,7 +365,7 @@ function Index() {
                 Como conduzimos{" "}
                 <span className="text-secondary glow-blue">cada projeto</span>
               </h2>
-              <div className="hand-rule mt-10 max-w-xs" aria-hidden />
+              
               <a
                 href="#contato"
                 className="neon-btn mt-10 inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-medium tracking-[0.15em] text-primary uppercase"
