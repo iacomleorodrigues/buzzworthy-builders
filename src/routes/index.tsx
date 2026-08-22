@@ -7,6 +7,8 @@ import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { CountUp } from "@/components/CountUp";
+import { TypingEffect } from "@/components/TypingEffect";
+
 
 
 
