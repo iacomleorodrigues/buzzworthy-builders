@@ -97,10 +97,10 @@
   --sidebar-ring: oklch(0.717 0.134 227.9);
 
   --gradient-brand: linear-gradient(100deg, oklch(0.566 0.227 0.7), oklch(0.717 0.134 227.9));
-  --glow-pink: 0 0 40px -6px oklch(0.566 0.227 0.7 / 70%);
-  --glow-blue: 0 0 40px -6px oklch(0.717 0.134 227.9 / 70%);
-  --text-glow-pink: 0 0 18px oklch(0.566 0.227 0.7 / 55%);
-  --text-glow-blue: 0 0 18px oklch(0.717 0.134 227.9 / 55%);
+  --glow-pink: 0 0 25px -5px oklch(0.566 0.227 0.7 / 35%);
+  --glow-blue: 0 0 25px -5px oklch(0.717 0.134 227.9 / 35%);
+  --text-glow-pink: 0 0 12px oklch(0.566 0.227 0.7 / 25%);
+  --text-glow-blue: 0 0 12px oklch(0.717 0.134 227.9 / 25%);
 }
 
 @theme {
