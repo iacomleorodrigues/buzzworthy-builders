@@ -276,7 +276,7 @@ function Index() {
                 <article
                   key={s.n}
                   data-reveal
-                  className="reveal group relative overflow-hidden bg-card p-9 transition-colors hover:bg-muted"
+                  className="reveal group relative overflow-hidden bg-card/40 backdrop-blur-xl p-9 transition-colors hover:bg-muted/40"
                   style={{ transitionDelay: `${(i % 3) * 150}ms` }}
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
