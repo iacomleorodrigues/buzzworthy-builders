@@ -219,7 +219,7 @@ function Index() {
                 Ver serviços
               </a>
             </div>
-            <div data-reveal className="reveal hand-rule mt-14 max-w-md" aria-hidden />
+            
             <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
               Resposta em até 1 dia útil · sem compromisso
             </p>
