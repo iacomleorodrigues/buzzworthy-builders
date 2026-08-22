@@ -246,29 +246,39 @@ function Index() {
             
             <div className="relative hidden md:flex aspect-square items-center justify-center">
               <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
-            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-              For the code present, I get the error below.
-
-Please think step-by-step in order to resolve it.
-```
-R3F: Hooks can only be used within the Canvas component!
-
-{
-  "timestamp": 1787390032239,
-  "error_type": "RUNTIME_ERROR",
-  "filename": "/",
-  "lineno": 0,
-  "colno": 0,
-  "stack": "Error: R3F: Hooks can only be used within the Canvas component!\n    at useStore (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-three-fiber.esm-v95HFQMP.js?v=97802f56:53119:20)\n    at useFrame (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-three-fiber.esm-v95HFQMP.js?v=97802f56:53135:16)\n    at CyberSphere (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/src/components/CyberSphere.tsx:10:2)\n    at Object.react_stack_bottom_frame (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:12618:12)\n    at renderWithHooks (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:3965:19)\n    at updateFunctionComponent (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:5321:16)\n    at beginWork (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:5872:628)\n    at runWithFiberInDEV (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:604:66)\n    at performUnitOfWork (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:8181:92)\n    at workLoopSync (https://a1c807bf-cd99-4a07-9bec-18bb1ea01bc5.lovableproject.com/node_modules/.vite/deps/react-dom_client.js?v=df1ff132:8077:37)",
-  "has_blank_screen": true
-}
-```
+            <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-[0.6rem] leading-relaxed tracking-[0.1em] text-muted-foreground uppercase px-4">
+              <div className="max-w-[300px] break-words">
+                For the code present, I get the error below.
+                <br /><br />
+                Please think step-by-step in order to resolve it.
+                <br />
+                {"```"}
+                <br />
+                R3F: Hooks can only be used within the Canvas component!
+                <br /><br />
+                {"{"}
+                <br />
+                &nbsp;&nbsp;"timestamp": 1787390032239,
+                <br />
+                &nbsp;&nbsp;"error_type": "RUNTIME_ERROR",
+                <br />
+                &nbsp;&nbsp;"filename": "/",
+                <br />
+                &nbsp;&nbsp;"lineno": 0,
+                <br />
+                &nbsp;&nbsp;"colno": 0,
+                <br />
+                &nbsp;&nbsp;"stack": "Error: R3F: Hooks can only be used within the Canvas component!...",
+                <br />
+                &nbsp;&nbsp;"has_blank_screen": true
+                <br />
+                {"}"}
+                <br />
+                {"```"}
+              </div>
             </div>
+          </div>
 
-
-
-
-            </div>
           </div>
           <div className="circuit-line absolute bottom-0 left-0 h-px w-full" aria-hidden />
         </section>
