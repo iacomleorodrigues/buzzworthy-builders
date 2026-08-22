@@ -16,17 +16,16 @@ const ClientOnlySphere = () => {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <Suspense fallback={null}>
-        <div className="h-full w-full opacity-60">
-          <Canvas>
-            <CyberSphere />
-          </Canvas>
-        </div>
+        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+          <CyberSphere />
+        </Canvas>
       </Suspense>
     </div>
   );
 };
+
 
 
 
@@ -197,8 +196,9 @@ function Index() {
       </header>
 
       <main>
-        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
+        <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center pt-24 md:pt-32">
           <ClientOnlySphere />
+
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p
@@ -244,11 +244,9 @@ function Index() {
             <div className="relative hidden md:flex aspect-square items-center justify-center">
               <div className="absolute inset-0 z-0 bg-radial-gradient from-primary/10 to-transparent blur-3xl opacity-50" />
             <div className="relative z-10 w-full h-full text-center flex items-center justify-center text-xs tracking-[0.2em] text-muted-foreground uppercase">
-              quero algo 3D aqui, que se mova, algo que tenha a ver com a identidade da página
-              <Suspense fallback={null}>
-                <CyberSphere />
-              </Suspense>
+              {/* O elemento 3D está renderizado pelo ClientOnlySphere em posição absoluta no container pai */}
             </div>
+
 
 
             </div>
