@@ -18,10 +18,13 @@ const ClientOnlySphere = () => {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <Suspense fallback={null}>
-        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-          <CyberSphere />
-        </Canvas>
+        <div className="h-full w-full opacity-60">
+          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+            <CyberSphere />
+          </Canvas>
+        </div>
       </Suspense>
+
     </div>
   );
 };
