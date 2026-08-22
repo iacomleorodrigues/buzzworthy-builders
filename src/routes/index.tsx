@@ -313,7 +313,7 @@ function Index() {
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
             >
-              Quem já trabalhou com a gente
+              <TypingEffect text="Quem já trabalhou com a gente" />
             </h2>
             <div className="mt-14 grid gap-6 md:grid-cols-3">
               {testimonials.map((t, i) => (
