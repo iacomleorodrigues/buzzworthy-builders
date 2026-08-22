@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/yw.png.asset.json";
 import logoMark from "@/assets/logo-mark.png.asset.json";
+import logoHorizontal from "@/assets/logo-horizontal.png.asset.json";
 import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -112,7 +113,7 @@ function Index() {
       <header className="sticky top-0 z-30 border-b border-border bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block">
-            <img src={logoMark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+            <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden items-center gap-10 text-xs tracking-[0.25em] text-muted-foreground uppercase md:flex">
             {navLinks.map((l) => (
@@ -442,7 +443,7 @@ function Index() {
       <footer className="border-t border-border pb-20 md:pb-0">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
           <Link to="/">
-            <img src={logoMark.url} alt="yedweb" className="h-14 w-14 object-contain" />
+            <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </Link>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.2em] text-muted-foreground uppercase">
