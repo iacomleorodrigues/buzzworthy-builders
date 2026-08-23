@@ -39,33 +39,28 @@ export function ParticleNetwork() {
 
     for (let i = 0; i < count; i++) {
       const idx = i * 3;
-      const vX = velocities[idx];
-      const vY = velocities[idx + 1];
-      const vZ = velocities[idx + 2];
-
-      if (vX === undefined || vY === undefined || vZ === undefined) continue;
+      const vX = velocities[idx] ?? 0;
+      const vY = velocities[idx + 1] ?? 0;
+      const vZ = velocities[idx + 2] ?? 0;
 
       positions[idx] += vX;
       positions[idx + 1] += vY;
       positions[idx + 2] += vZ;
 
       // Bounce off boundaries
-      if (Math.abs(positions[idx]!) > 5) velocities[idx] *= -1;
-      if (Math.abs(positions[idx + 1]!) > 5) velocities[idx + 1] *= -1;
-      if (Math.abs(positions[idx + 2]!) > 5) velocities[idx + 2] *= -1;
+      if (Math.abs(positions[idx] ?? 0) > 5) velocities[idx] *= -1;
+      if (Math.abs(positions[idx + 1] ?? 0) > 5) velocities[idx + 1] *= -1;
+      if (Math.abs(positions[idx + 2] ?? 0) > 5) velocities[idx + 2] *= -1;
 
       // Connections
       for (let j = i + 1; j < count; j++) {
         const jdx = j * 3;
-        const p1x = positions[idx];
-        const p1y = positions[idx + 1];
-        const p1z = positions[idx + 2];
-        const p2x = positions[jdx];
-        const p2y = positions[jdx + 1];
-        const p2z = positions[jdx + 2];
-
-        if (p1x === undefined || p1y === undefined || p1z === undefined ||
-            p2x === undefined || p2y === undefined || p2z === undefined) continue;
+        const p1x = positions[idx] ?? 0;
+        const p1y = positions[idx + 1] ?? 0;
+        const p1z = positions[idx + 2] ?? 0;
+        const p2x = positions[jdx] ?? 0;
+        const p2y = positions[jdx + 1] ?? 0;
+        const p2z = positions[jdx + 2] ?? 0;
 
         const dx = p1x - p2x;
         const dy = p1y - p2y;
@@ -97,6 +92,7 @@ export function ParticleNetwork() {
             count={count}
             array={particles}
             itemSize={3}
+            args={[particles, 3]}
           />
         </bufferGeometry>
         <pointsMaterial size={0.05} color="#d5066f" transparent opacity={0.6} />
