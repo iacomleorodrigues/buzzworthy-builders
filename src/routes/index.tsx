@@ -2,6 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Suspense, lazy, useEffect, useState, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ParticleNetwork } from "@/components/ParticleNetwork";
+import { 
+  TrendingUp, 
+  Globe, 
+  Target, 
+  Share2, 
+  BookOpen, 
+  LineChart 
+} from "lucide-react";
 
 import logo from "@/assets/yw.png.asset.json";
 import logoMark from "@/assets/logo-mark.png.asset.json";
@@ -41,36 +49,42 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
+    icon: TrendingUp,
     title: "Marketing & Tráfego",
     desc: "Estratégia, mídia paga e funis construídos sobre dados, não sobre achismo.",
     benefit: "Mais leads qualificados chegando toda semana — com custo por venda sob controle.",
   },
   {
     n: "02",
+    icon: Globe,
     title: "Criação de Sites",
     desc: "Sites e e-commerces rápidos, responsivos e feitos sob medida.",
     benefit: "Um site que vende enquanto você dorme e sustenta o preço que você cobra.",
   },
   {
     n: "03",
+    icon: Target,
     title: "Landing Pages",
     desc: "Páginas cirúrgicas para lançamentos, captação e vendas diretas.",
     benefit: "Cada real investido em tráfego cai numa página feita para converter.",
   },
   {
     n: "04",
+    icon: Share2,
     title: "Social Media",
     desc: "Conteúdo, direção de arte e gestão de redes com consistência de marca.",
     benefit: "Sua marca vira referência no feed — e lembrada na hora da decisão.",
   },
   {
     n: "05",
+    icon: BookOpen,
     title: "Treinamentos",
     desc: "Capacitação prática para times de marketing, vendas e criação.",
     benefit: "Seu time executa sozinho, mais rápido e sem depender de terceiros.",
   },
   {
     n: "06",
+    icon: LineChart,
     title: "Consultorias & Mentorias",
     desc: "Diagnóstico, plano de ação e acompanhamento até o resultado.",
     benefit: "Clareza para decidir onde investir e parar de queimar orçamento.",
@@ -276,7 +290,10 @@ function Index() {
                   style={{ transitionDelay: `${(i % 3) * 150}ms` }}
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
-                  <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
+                    <s.icon className="h-5 w-5 text-secondary/50 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_8px_rgba(213,6,111,0.5)]" />
+                  </div>
                   <h3 className="mt-5 font-display text-xl font-bold transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)]">
                     {s.title}
                   </h3>
