@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState, useMemo } from "react";
+import { Canvas } from "@react-three/fiber";
+import { ParticleNetwork } from "@/components/ParticleNetwork";
 
 import logo from "@/assets/yw.png.asset.json";
 import logoMark from "@/assets/logo-mark.png.asset.json";
@@ -186,6 +188,11 @@ function Index() {
 
       <main>
         <section className="tunnel-grid scanlines relative overflow-hidden border-b border-border min-h-[500px] flex items-center">
+          <div className="absolute inset-0 z-0 opacity-40 md:opacity-100">
+            <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+              <ParticleNetwork />
+            </Canvas>
+          </div>
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
