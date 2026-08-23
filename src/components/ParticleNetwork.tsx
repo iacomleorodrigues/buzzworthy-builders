@@ -28,9 +28,11 @@ export function ParticleNetwork() {
   }, []);
 
   useFrame(() => {
-    if (!meshRef.current || !linesRef.current) return;
+    const mesh = meshRef.current;
+    const lines = linesRef.current;
+    if (!mesh || !lines) return;
 
-    const positionsAttr = meshRef.current.geometry.getAttribute('position') as THREE.BufferAttribute;
+    const positionsAttr = mesh.geometry.getAttribute('position') as THREE.BufferAttribute;
     if (!positionsAttr) return;
     const positions = positionsAttr.array as Float32Array;
     
@@ -49,40 +51,48 @@ export function ParticleNetwork() {
         positions[idx + 2] += vZ;
 
         // Bounce off boundaries
-        if (Math.abs(positions[idx] ?? 0) > 5) velocities[idx] = -vX;
-        if (Math.abs(positions[idx + 1] ?? 0) > 5) velocities[idx + 1] = -vY;
-        if (Math.abs(positions[idx + 2] ?? 0) > 5) velocities[idx + 2] = -vZ;
+        const pX = positions[idx];
+        const pY = positions[idx + 1];
+        const pZ = positions[idx + 2];
+
+        if (typeof pX === 'number' && Math.abs(pX) > 5) velocities[idx] = -vX;
+        if (typeof pY === 'number' && Math.abs(pY) > 5) velocities[idx + 1] = -vY;
+        if (typeof pZ === 'number' && Math.abs(pZ) > 5) velocities[idx + 2] = -vZ;
       }
 
       // Connections
       for (let j = i + 1; j < count; j++) {
         const jdx = j * 3;
-        const p1x = positions[idx] ?? 0;
-        const p1y = positions[idx + 1] ?? 0;
-        const p1z = positions[idx + 2] ?? 0;
-        const p2x = positions[jdx] ?? 0;
-        const p2y = positions[jdx + 1] ?? 0;
-        const p2z = positions[jdx + 2] ?? 0;
+        const p1x = positions[idx];
+        const p1y = positions[idx + 1];
+        const p1z = positions[idx + 2];
+        const p2x = positions[jdx];
+        const p2y = positions[jdx + 1];
+        const p2z = positions[jdx + 2];
 
-        const dx = p1x - p2x;
-        const dy = p1y - p2y;
-        const dz = p1z - p2z;
-        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        if (typeof p1x === 'number' && typeof p1y === 'number' && typeof p1z === 'number' &&
+            typeof p2x === 'number' && typeof p2y === 'number' && typeof p2z === 'number') {
+          
+          const dx = p1x - p2x;
+          const dy = p1y - p2y;
+          const dz = p1z - p2z;
+          const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
-        if (dist < 2.5) {
-          linePositions[lineCount * 6] = p1x;
-          linePositions[lineCount * 6 + 1] = p1y;
-          linePositions[lineCount * 6 + 2] = p1z;
-          linePositions[lineCount * 6 + 3] = p2x;
-          linePositions[lineCount * 6 + 4] = p2y;
-          linePositions[lineCount * 6 + 5] = p2z;
-          lineCount++;
+          if (dist < 2.5) {
+            linePositions[lineCount * 6] = p1x;
+            linePositions[lineCount * 6 + 1] = p1y;
+            linePositions[lineCount * 6 + 2] = p1z;
+            linePositions[lineCount * 6 + 3] = p2x;
+            linePositions[lineCount * 6 + 4] = p2y;
+            linePositions[lineCount * 6 + 5] = p2z;
+            lineCount++;
+          }
         }
       }
     }
 
     positionsAttr.needsUpdate = true;
-    linesRef.current.geometry.setAttribute('position', new THREE.BufferAttribute(linePositions.slice(0, lineCount * 6), 3));
+    lines.geometry.setAttribute('position', new THREE.BufferAttribute(linePositions.slice(0, lineCount * 6), 3));
   });
 
   return (
