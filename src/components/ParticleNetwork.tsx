@@ -46,18 +46,24 @@ export function ParticleNetwork() {
       const vZ = velocities[idx + 2];
 
       if (typeof vX === 'number' && typeof vY === 'number' && typeof vZ === 'number') {
-        positions[idx] += vX;
-        positions[idx + 1] += vY;
-        positions[idx + 2] += vZ;
+        const currentPX = positions[idx];
+        const currentPY = positions[idx + 1];
+        const currentPZ = positions[idx + 2];
 
-        // Bounce off boundaries
-        const pX = positions[idx];
-        const pY = positions[idx + 1];
-        const pZ = positions[idx + 2];
+        if (typeof currentPX === 'number' && typeof currentPY === 'number' && typeof currentPZ === 'number') {
+          positions[idx] = currentPX + vX;
+          positions[idx + 1] = currentPY + vY;
+          positions[idx + 2] = currentPZ + vZ;
 
-        if (typeof pX === 'number' && Math.abs(pX) > 5) velocities[idx] = -vX;
-        if (typeof pY === 'number' && Math.abs(pY) > 5) velocities[idx + 1] = -vY;
-        if (typeof pZ === 'number' && Math.abs(pZ) > 5) velocities[idx + 2] = -vZ;
+          // Bounce off boundaries
+          const nextPX = positions[idx];
+          const nextPY = positions[idx + 1];
+          const nextPZ = positions[idx + 2];
+
+          if (typeof nextPX === 'number' && Math.abs(nextPX) > 5) velocities[idx] = -vX;
+          if (typeof nextPY === 'number' && Math.abs(nextPY) > 5) velocities[idx + 1] = -vY;
+          if (typeof nextPZ === 'number' && Math.abs(nextPZ) > 5) velocities[idx + 2] = -vZ;
+        }
       }
 
       // Connections
