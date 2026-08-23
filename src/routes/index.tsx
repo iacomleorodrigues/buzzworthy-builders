@@ -2,6 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Suspense, lazy, useEffect, useState, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { ParticleNetwork } from "@/components/ParticleNetwork";
+import { 
+  TrendingUp, 
+  Globe, 
+  Target, 
+  Instagram, 
+  BookOpen, 
+  LineChart 
+} from "lucide-react";
 
 import logo from "@/assets/yw.png.asset.json";
 import logoMark from "@/assets/logo-mark.png.asset.json";
