@@ -38,29 +38,47 @@ export function ParticleNetwork() {
     let lineCount = 0;
 
     for (let i = 0; i < count; i++) {
-      positions[i * 3] += velocities[i * 3];
-      positions[i * 3 + 1] += velocities[i * 3 + 1];
-      positions[i * 3 + 2] += velocities[i * 3 + 2];
+      const idx = i * 3;
+      const vX = velocities[idx];
+      const vY = velocities[idx + 1];
+      const vZ = velocities[idx + 2];
+
+      if (vX === undefined || vY === undefined || vZ === undefined) continue;
+
+      positions[idx] += vX;
+      positions[idx + 1] += vY;
+      positions[idx + 2] += vZ;
 
       // Bounce off boundaries
-      if (Math.abs(positions[i * 3]) > 5) velocities[i * 3] *= -1;
-      if (Math.abs(positions[i * 3 + 1]) > 5) velocities[i * 3 + 1] *= -1;
-      if (Math.abs(positions[i * 3 + 2]) > 5) velocities[i * 3 + 2] *= -1;
+      if (Math.abs(positions[idx]!) > 5) velocities[idx] *= -1;
+      if (Math.abs(positions[idx + 1]!) > 5) velocities[idx + 1] *= -1;
+      if (Math.abs(positions[idx + 2]!) > 5) velocities[idx + 2] *= -1;
 
       // Connections
       for (let j = i + 1; j < count; j++) {
-        const dx = positions[i * 3] - positions[j * 3];
-        const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
-        const dz = positions[i * 3 + 2] - positions[j * 3 + 2];
+        const jdx = j * 3;
+        const p1x = positions[idx];
+        const p1y = positions[idx + 1];
+        const p1z = positions[idx + 2];
+        const p2x = positions[jdx];
+        const p2y = positions[jdx + 1];
+        const p2z = positions[jdx + 2];
+
+        if (p1x === undefined || p1y === undefined || p1z === undefined ||
+            p2x === undefined || p2y === undefined || p2z === undefined) continue;
+
+        const dx = p1x - p2x;
+        const dy = p1y - p2y;
+        const dz = p1z - p2z;
         const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
         if (dist < 2.5) {
-          linePositions[lineCount * 6] = positions[i * 3];
-          linePositions[lineCount * 6 + 1] = positions[i * 3 + 1];
-          linePositions[lineCount * 6 + 2] = positions[i * 3 + 2];
-          linePositions[lineCount * 6 + 3] = positions[j * 3];
-          linePositions[lineCount * 6 + 4] = positions[j * 3 + 1];
-          linePositions[lineCount * 6 + 5] = positions[j * 3 + 2];
+          linePositions[lineCount * 6] = p1x;
+          linePositions[lineCount * 6 + 1] = p1y;
+          linePositions[lineCount * 6 + 2] = p1z;
+          linePositions[lineCount * 6 + 3] = p2x;
+          linePositions[lineCount * 6 + 4] = p2y;
+          linePositions[lineCount * 6 + 5] = p2z;
           lineCount++;
         }
       }
@@ -79,7 +97,6 @@ export function ParticleNetwork() {
             count={count}
             array={particles}
             itemSize={3}
-            args={[particles, 3]}
           />
         </bufferGeometry>
         <pointsMaterial size={0.05} color="#d5066f" transparent opacity={0.6} />
