@@ -49,36 +49,42 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     n: "01",
+    icon: TrendingUp,
     title: "Marketing & Tráfego",
     desc: "Estratégia, mídia paga e funis construídos sobre dados, não sobre achismo.",
     benefit: "Mais leads qualificados chegando toda semana — com custo por venda sob controle.",
   },
   {
     n: "02",
+    icon: Globe,
     title: "Criação de Sites",
     desc: "Sites e e-commerces rápidos, responsivos e feitos sob medida.",
     benefit: "Um site que vende enquanto você dorme e sustenta o preço que você cobra.",
   },
   {
     n: "03",
+    icon: Target,
     title: "Landing Pages",
     desc: "Páginas cirúrgicas para lançamentos, captação e vendas diretas.",
     benefit: "Cada real investido em tráfego cai numa página feita para converter.",
   },
   {
     n: "04",
+    icon: Share2,
     title: "Social Media",
     desc: "Conteúdo, direção de arte e gestão de redes com consistência de marca.",
     benefit: "Sua marca vira referência no feed — e lembrada na hora da decisão.",
   },
   {
     n: "05",
+    icon: BookOpen,
     title: "Treinamentos",
     desc: "Capacitação prática para times de marketing, vendas e criação.",
     benefit: "Seu time executa sozinho, mais rápido e sem depender de terceiros.",
   },
   {
     n: "06",
+    icon: LineChart,
     title: "Consultorias & Mentorias",
     desc: "Diagnóstico, plano de ação e acompanhamento até o resultado.",
     benefit: "Clareza para decidir onde investir e parar de queimar orçamento.",
