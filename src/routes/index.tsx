@@ -290,7 +290,10 @@ function Index() {
                   style={{ transitionDelay: `${(i % 3) * 150}ms` }}
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
-                  <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
+                    <s.icon className="h-5 w-5 text-secondary/50 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_8px_rgba(213,6,111,0.5)]" />
+                  </div>
                   <h3 className="mt-5 font-display text-xl font-bold transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)]">
                     {s.title}
                   </h3>
