@@ -27,10 +27,13 @@ export function ParticleNetwork() {
     return temp;
   }, []);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!meshRef.current || !linesRef.current) return;
 
-    const positions = meshRef.current.geometry.attributes.position.array as Float32Array;
+    const positionsAttr = meshRef.current.geometry.getAttribute('position') as THREE.BufferAttribute;
+    if (!positionsAttr) return;
+    const positions = positionsAttr.array as Float32Array;
+    
     const linePositions = new Float32Array(count * count * 6);
     let lineCount = 0;
 
@@ -63,7 +66,7 @@ export function ParticleNetwork() {
       }
     }
 
-    meshRef.current.geometry.attributes.position.needsUpdate = true;
+    positionsAttr.needsUpdate = true;
     linesRef.current.geometry.setAttribute('position', new THREE.BufferAttribute(linePositions.slice(0, lineCount * 6), 3));
   });
 
@@ -76,6 +79,7 @@ export function ParticleNetwork() {
             count={count}
             array={particles}
             itemSize={3}
+            args={[particles, 3]}
           />
         </bufferGeometry>
         <pointsMaterial size={0.05} color="#d5066f" transparent opacity={0.6} />
