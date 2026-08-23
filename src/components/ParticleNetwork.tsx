@@ -39,18 +39,20 @@ export function ParticleNetwork() {
 
     for (let i = 0; i < count; i++) {
       const idx = i * 3;
-      const vX = velocities[idx] ?? 0;
-      const vY = velocities[idx + 1] ?? 0;
-      const vZ = velocities[idx + 2] ?? 0;
+      const vX = velocities[idx];
+      const vY = velocities[idx + 1];
+      const vZ = velocities[idx + 2];
 
-      positions[idx] += vX;
-      positions[idx + 1] += vY;
-      positions[idx + 2] += vZ;
+      if (typeof vX === 'number' && typeof vY === 'number' && typeof vZ === 'number') {
+        positions[idx] += vX;
+        positions[idx + 1] += vY;
+        positions[idx + 2] += vZ;
 
-      // Bounce off boundaries
-      if (Math.abs(positions[idx] ?? 0) > 5) velocities[idx] *= -1;
-      if (Math.abs(positions[idx + 1] ?? 0) > 5) velocities[idx + 1] *= -1;
-      if (Math.abs(positions[idx + 2] ?? 0) > 5) velocities[idx + 2] *= -1;
+        // Bounce off boundaries
+        if (Math.abs(positions[idx] ?? 0) > 5) velocities[idx] = -vX;
+        if (Math.abs(positions[idx + 1] ?? 0) > 5) velocities[idx + 1] = -vY;
+        if (Math.abs(positions[idx + 2] ?? 0) > 5) velocities[idx + 2] = -vZ;
+      }
 
       // Connections
       for (let j = i + 1; j < count; j++) {
