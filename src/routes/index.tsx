@@ -6,7 +6,7 @@ import {
   TrendingUp, 
   Globe, 
   Target, 
-  Instagram, 
+  Share2, 
   BookOpen, 
   LineChart 
 } from "lucide-react";
