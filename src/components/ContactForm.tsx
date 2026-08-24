@@ -40,13 +40,25 @@ const projetos = [
 const fieldClass =
   "w-full border border-input bg-card px-5 py-4 text-sm text-foreground outline-none transition-shadow placeholder:text-muted-foreground focus:border-secondary focus:shadow-[var(--glow-blue)]";
 
+const WHATSAPP_NUMBER = "5511987983553";
+
+function buildWhatsAppMessage(data: Fields) {
+  return encodeURIComponent(
+    `Olá! Meu nome é ${data.nome}.\n` +
+      `Contato: ${data.contato}\n` +
+      `Tipo de projeto: ${data.projeto}\n\n` +
+      `Mensagem:\n${data.mensagem}\n\n` +
+      `Gostaria de solicitar uma proposta.`
+  );
+}
+
 export function ContactForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = Object.fromEntries(new FormData(event.currentTarget));
+    const data = Object.fromEntries(new FormData(event.currentTarget)) as Record<string, string>;
     const result = schema.safeParse(data);
 
     if (!result.success) {
@@ -61,6 +73,9 @@ export function ContactForm() {
 
     setErrors({});
     setSent(true);
+
+    const message = buildWhatsAppMessage(result.data);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
   }
 
   if (sent) {
@@ -193,12 +208,12 @@ export function ContactForm() {
           Solicitar proposta
         </button>
         <a
-          href="https://wa.me/5500000000000"
+          href="https://wa.me/5511987983553"
           target="_blank"
           rel="noopener noreferrer"
           className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
         >
-          Falar no WhatsApp [SUBSTITUIR]
+          Falar no WhatsApp
         </a>
       </div>
 
