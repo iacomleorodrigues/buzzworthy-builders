@@ -471,7 +471,7 @@ function Index() {
               href="https://www.instagram.com/yedwebhub/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-secondary px-4 py-2 text-secondary transition-shadow hover:shadow-[var(--glow-blue)]"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-muted-foreground transition-colors hover:text-primary hover:border-primary/40"
               aria-label="Instagram yedweb"
             >
               <svg
