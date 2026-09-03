@@ -6,7 +6,7 @@ import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
 import caseBeautyAsset from "@/assets/case-beauty.png.asset.json";
 import caseIndustria from "@/assets/case-industria.jpg";
 import caseEducacao from "@/assets/case-educacao.jpg";
-import caseGastronomia from "@/assets/case-gastronomia.jpg";
+import caseGastronomiaAsset from "@/assets/case-gastronomia.png.asset.json";
 
 type Item = {
   img: string;
@@ -53,11 +53,11 @@ const items: Item[] = [
     desc: "Página de lançamento de cursos com vídeo, oferta e contagem regressiva.",
   },
   {
-    img: caseGastronomia,
+    img: caseGastronomiaAsset.url,
     niche: "Gastronomia",
-    title: "MONT CUISINE",
+    title: "CASA DO RIVAL",
     type: "Site institucional",
-    desc: "Cardápio digital, reservas e identidade visual de alto padrão.",
+    desc: "Cozinha contemporânea com menu degustação e reservas online.",
   },
 ];
 
