@@ -63,6 +63,7 @@ const items: Item[] = [
 
 export function CaseCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const targetIndexRef = useRef(0);
   const [active, setActive] = useState(0);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -71,16 +72,22 @@ export function CaseCarousel() {
     const el = trackRef.current;
     if (!el) return;
     const cards = Array.from(el.children) as HTMLElement[];
-    const center = el.scrollLeft + el.clientWidth / 2;
+    const firstCard = cards[0];
+    if (!firstCard) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    const targets = cards.map((card) =>
+      Math.min(maxScroll, Math.max(0, card.offsetLeft - firstCard.offsetLeft)),
+    );
     let best = 0;
     let bestDist = Infinity;
-    cards.forEach((c, i) => {
-      const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - center);
+    targets.forEach((target, i) => {
+      const d = Math.abs(target - el.scrollLeft);
       if (d < bestDist) {
         bestDist = d;
         best = i;
       }
     });
+    targetIndexRef.current = best;
     setActive(best);
     setAtStart(el.scrollLeft <= 4);
     setAtEnd(el.scrollLeft >= el.scrollWidth - el.clientWidth - 4);
@@ -98,11 +105,21 @@ export function CaseCarousel() {
     const el = trackRef.current;
     if (!el) return;
     const card = el.children[index] as HTMLElement | undefined;
-    if (!card) return;
-    el.scrollTo({ left: card.offsetLeft - 8, behavior: "smooth" });
+    const firstCard = el.children[0] as HTMLElement | undefined;
+    if (!card || !firstCard) return;
+    targetIndexRef.current = index;
+    setActive(index);
+    el.scrollTo({
+      left: Math.min(
+        el.scrollWidth - el.clientWidth,
+        Math.max(0, card.offsetLeft - firstCard.offsetLeft),
+      ),
+      behavior: "smooth",
+    });
   };
 
-  const scrollBy = (dir: 1 | -1) => goTo(Math.min(items.length - 1, Math.max(0, active + dir)));
+  const scrollBy = (dir: 1 | -1) =>
+    goTo(Math.min(items.length - 1, Math.max(0, targetIndexRef.current + dir)));
 
   // pointer drag-to-scroll (desktop)
   const drag = useRef({ down: false, startX: 0, startLeft: 0, moved: false, id: -1 });
