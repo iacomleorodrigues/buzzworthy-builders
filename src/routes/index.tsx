@@ -18,6 +18,7 @@ import { useRevealOnScroll } from "@/hooks/use-reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { CountUp } from "@/components/CountUp";
 import { TypingEffect } from "@/components/TypingEffect";
+import { CaseCarousel } from "@/components/CaseCarousel";
 
 
 
@@ -260,6 +261,24 @@ function Index() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-border" aria-label="Portfólio">
+          <div className="mx-auto max-w-6xl px-6 py-24">
+            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ portfólio</p>
+            <h2
+              data-reveal
+              className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
+            >
+              <TypingEffect text="Projetos em produção" />
+            </h2>
+            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
+              Uma amostra de landing pages e sites institucionais construídos para nichos diferentes — cada um com a mesma lógica: converter.
+            </p>
+            <div data-reveal className="reveal mt-12">
+              <CaseCarousel />
             </div>
           </div>
         </section>
