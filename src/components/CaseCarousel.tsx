@@ -32,11 +32,11 @@ const items: Item[] = [
     desc: "Autoridade e áreas de atuação com formulário de consulta qualificada.",
   },
   {
-    img: caseBeauty,
-    niche: "Beleza",
-    title: "NOVA SKIN",
-    type: "E-commerce",
-    desc: "Vitrine de produtos com checkout curto e prova social integrada.",
+    img: caseBeautyAsset.url,
+    niche: "Estética",
+    title: "CASA FLORA",
+    type: "Site institucional",
+    desc: "Clínica de estética avançada com tratamentos e agendamento online.",
   },
   {
     img: caseIndustria,
