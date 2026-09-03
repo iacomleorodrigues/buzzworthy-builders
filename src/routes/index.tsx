@@ -272,10 +272,10 @@ function Index() {
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
             >
-              <TypingEffect text="Projetos em produção" />
+              <TypingEffect text="Projetos Entregues" />
             </h2>
             <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
-              Uma amostra de landing pages e sites institucionais construídos para nichos diferentes — cada um com a mesma lógica: converter.
+              Landing pages e sites institucionais construídos para nichos diferentes — cada um com a mesma lógica: converter.
             </p>
             <div data-reveal className="reveal mt-12">
               <CaseCarousel />
