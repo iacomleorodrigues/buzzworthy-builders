@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import caseFitness from "@/assets/case-fitness.jpg";
+import caseFitnessAsset from "@/assets/case-fitness.png.asset.json";
 import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
 import caseBeautyAsset from "@/assets/case-beauty.png.asset.json";
 import casePsicologiaAsset from "@/assets/case-psicologia.png.asset.json";
