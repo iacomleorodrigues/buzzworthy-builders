@@ -214,7 +214,7 @@ function Index() {
               className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
             >
               <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
-              Agência digital · high tech, low bullshit
+              AGÊNCIA DIGITAL · HIGH TECH, NO BULLSHIT
             </p>
             <h1
               data-reveal
