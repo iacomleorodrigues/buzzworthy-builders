@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import caseFitness from "@/assets/case-fitness.jpg";
 import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
 import caseBeautyAsset from "@/assets/case-beauty.png.asset.json";
-import caseIndustria from "@/assets/case-industria.jpg";
+import casePsicologiaAsset from "@/assets/case-psicologia.png.asset.json";
 import caseSaasAsset from "@/assets/case-saas.png.asset.json";
 import caseGastronomiaAsset from "@/assets/case-gastronomia.png.asset.json";
 
@@ -39,11 +39,11 @@ const items: Item[] = [
     desc: "Clínica de estética avançada com tratamentos e agendamento online.",
   },
   {
-    img: caseIndustria,
-    niche: "Indústria",
-    title: "MECTRON ENGENHARIA",
+    img: casePsicologiaAsset.url,
+    niche: "Psicologia",
+    title: "MARIANA LOPES",
     type: "Site institucional",
-    desc: "Catálogo técnico, cases e canal direto com o time comercial.",
+    desc: "Terapia online e presencial com agendamento de sessões.",
   },
   {
     img: caseSaasAsset.url,
