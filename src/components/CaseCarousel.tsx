@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import caseFitness from "@/assets/case-fitness.jpg";
-import caseJuridico from "@/assets/case-juridico.jpg";
+import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
 import caseBeauty from "@/assets/case-beauty.jpg";
 import caseIndustria from "@/assets/case-industria.jpg";
 import caseEducacao from "@/assets/case-educacao.jpg";
@@ -25,7 +25,7 @@ const items: Item[] = [
     desc: "Página de captação para planos de treino com agendamento direto.",
   },
   {
-    img: caseJuridico,
+    img: caseJuridicoAsset.url,
     niche: "Jurídico",
     title: "LEXFIN ADVOCACIA",
     type: "Site institucional",
