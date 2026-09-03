@@ -18,11 +18,11 @@ type Item = {
 
 const items: Item[] = [
   {
-    img: caseFitness,
+    img: caseFitnessAsset.url,
     niche: "Fitness",
-    title: "PULSE STUDIO",
+    title: "FORJA STUDIO",
     type: "Landing page",
-    desc: "Página de captação para planos de treino com agendamento direto.",
+    desc: "Captação de matrículas com modalidades, planos e aula grátis.",
   },
   {
     img: caseJuridicoAsset.url,
