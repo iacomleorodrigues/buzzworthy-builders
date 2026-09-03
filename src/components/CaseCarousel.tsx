@@ -5,7 +5,7 @@ import caseFitness from "@/assets/case-fitness.jpg";
 import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
 import caseBeautyAsset from "@/assets/case-beauty.png.asset.json";
 import caseIndustria from "@/assets/case-industria.jpg";
-import caseEducacao from "@/assets/case-educacao.jpg";
+import caseSaasAsset from "@/assets/case-saas.png.asset.json";
 import caseGastronomiaAsset from "@/assets/case-gastronomia.png.asset.json";
 
 type Item = {
@@ -46,11 +46,11 @@ const items: Item[] = [
     desc: "Catálogo técnico, cases e canal direto com o time comercial.",
   },
   {
-    img: caseEducacao,
-    niche: "Educação",
-    title: "CODE ARENA",
+    img: caseSaasAsset.url,
+    niche: "SaaS",
+    title: "ÓRBITA",
     type: "Landing page",
-    desc: "Página de lançamento de cursos com vídeo, oferta e contagem regressiva.",
+    desc: "Painel de métricas em tempo real com trial e ativação de leads.",
   },
   {
     img: caseGastronomiaAsset.url,
