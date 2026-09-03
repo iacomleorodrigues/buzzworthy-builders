@@ -105,7 +105,18 @@ export function CaseCarousel() {
   const scrollBy = (dir: 1 | -1) => goTo(Math.min(items.length - 1, Math.max(0, active + dir)));
 
   // pointer drag-to-scroll (desktop)
-  const drag = useRef({ down: false, startX: 0, startLeft: 0, moved: false });
+  const drag = useRef({ down: false, startX: 0, startLeft: 0, moved: false, id: -1 });
+  const [dragging, setDragging] = useState(false);
+
+  const endDrag = useCallback((el: HTMLDivElement | null) => {
+    if (!drag.current.down) return;
+    drag.current.down = false;
+    setDragging(false);
+    if (el && drag.current.id !== -1 && el.hasPointerCapture(drag.current.id)) {
+      el.releasePointerCapture(drag.current.id);
+    }
+    drag.current.id = -1;
+  }, []);
 
   return (
     <div className="relative">
@@ -134,27 +145,45 @@ export function CaseCarousel() {
         ref={trackRef}
         onScroll={update}
         onPointerDown={(e) => {
-          if (e.pointerType !== "mouse") return;
-          const el = trackRef.current!;
-          drag.current = { down: true, startX: e.clientX, startLeft: el.scrollLeft, moved: false };
+          if (e.pointerType !== "mouse" || e.button !== 0) return;
+          const el = e.currentTarget;
+          drag.current = {
+            down: true,
+            startX: e.clientX,
+            startLeft: el.scrollLeft,
+            moved: false,
+            id: e.pointerId,
+          };
+          el.setPointerCapture(e.pointerId);
+          setDragging(true);
         }}
         onPointerMove={(e) => {
           if (!drag.current.down) return;
-          const el = trackRef.current!;
+          e.preventDefault();
+          const el = e.currentTarget;
           const dx = e.clientX - drag.current.startX;
-          if (Math.abs(dx) > 4) drag.current.moved = true;
+          if (Math.abs(dx) > 3) drag.current.moved = true;
           el.scrollLeft = drag.current.startLeft - dx;
         }}
-        onPointerUp={() => {
-          if (drag.current.moved) goTo(active);
-          drag.current.down = false;
+        onPointerUp={(e) => endDrag(e.currentTarget)}
+        onPointerCancel={(e) => endDrag(e.currentTarget)}
+        onClickCapture={(e) => {
+          if (drag.current.moved) {
+            e.preventDefault();
+            e.stopPropagation();
+            drag.current.moved = false;
+          }
         }}
-        onPointerLeave={() => {
-          drag.current.down = false;
+        onDragStart={(e) => e.preventDefault()}
+        className="flex gap-4 overflow-x-auto overscroll-x-contain px-1 pb-4 [scrollbar-width:none] sm:gap-6 [&::-webkit-scrollbar]:hidden"
+        style={{
+          scrollSnapType: dragging ? "none" : "x mandatory",
+          scrollPaddingLeft: "0.25rem",
+          cursor: dragging ? "grabbing" : "grab",
+          touchAction: "pan-x pan-y pinch-zoom",
         }}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-1 pb-4 [scrollbar-width:none] sm:gap-6 [&::-webkit-scrollbar]:hidden"
-        style={{ scrollPaddingLeft: "0.25rem", cursor: "grab", touchAction: "pan-y pinch-zoom" }}
       >
+
         {items.map((item) => (
           <article
             key={item.title}
