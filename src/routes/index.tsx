@@ -320,9 +320,6 @@ function Index() {
                   <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-foreground/90">
                     {s.benefit}
                   </p>
-                  <span className="mt-6 inline-block text-xs tracking-[0.25em] text-secondary uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    → falar sobre isso
-                  </span>
                 </article>
               ))}
             </div>
