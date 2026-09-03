@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import caseFitness from "@/assets/case-fitness.jpg";
 import caseJuridicoAsset from "@/assets/case-juridico.png.asset.json";
-import caseBeauty from "@/assets/case-beauty.jpg";
+import caseBeautyAsset from "@/assets/case-beauty.png.asset.json";
 import caseIndustria from "@/assets/case-industria.jpg";
 import caseEducacao from "@/assets/case-educacao.jpg";
 import caseGastronomia from "@/assets/case-gastronomia.jpg";
@@ -32,11 +32,11 @@ const items: Item[] = [
     desc: "Autoridade e áreas de atuação com formulário de consulta qualificada.",
   },
   {
-    img: caseBeauty,
-    niche: "Beleza",
-    title: "NOVA SKIN",
-    type: "E-commerce",
-    desc: "Vitrine de produtos com checkout curto e prova social integrada.",
+    img: caseBeautyAsset.url,
+    niche: "Estética",
+    title: "CASA FLORA",
+    type: "Site institucional",
+    desc: "Clínica de estética avançada com tratamentos e agendamento online.",
   },
   {
     img: caseIndustria,
