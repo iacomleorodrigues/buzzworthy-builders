@@ -25,7 +25,7 @@ const items: Item[] = [
     desc: "Página de captação para planos de treino com agendamento direto.",
   },
   {
-    img: caseJuridico,
+    img: caseJuridicoAsset.url,
     niche: "Jurídico",
     title: "LEXFIN ADVOCACIA",
     type: "Site institucional",
