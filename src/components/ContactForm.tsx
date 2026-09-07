@@ -84,18 +84,18 @@ export function ContactForm() {
         role="status"
         className="corner-frame border border-secondary bg-card p-10 text-left"
       >
-        <p className="text-xs tracking-[0.35em] text-secondary uppercase glow-blue">
+        <p className="text-xs tracking-[0.1em] text-secondary uppercase glow-blue">
           / mensagem recebida
         </p>
         <h3 className="mt-5 font-display text-2xl font-bold">Sinal captado.</h3>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-4 text-sm leading-relaxed text-foreground/85">
           Retornamos em até 1 dia útil com os próximos passos. Se preferir acelerar, chame no
           WhatsApp.
         </p>
         <button
           type="button"
           onClick={() => setSent(false)}
-          className="neon-btn mt-8 border border-primary px-6 py-3 text-xs tracking-[0.2em] text-primary uppercase"
+          className="neon-btn mt-8 border border-primary px-6 py-3 text-xs tracking-[0.08em] text-primary uppercase"
         >
           Enviar outra mensagem
         </button>
