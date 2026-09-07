@@ -211,7 +211,7 @@ function Index() {
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
-              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
+              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.1em] text-secondary uppercase glow-blue"
             >
               <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
               AGÊNCIA DIGITAL · HIGH TECH, NO BULLSHIT
@@ -224,19 +224,19 @@ function Index() {
             </h1>
             <p
               data-reveal
-              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              className="reveal mt-7 max-w-xl text-base leading-relaxed text-foreground/85 md:text-lg"
             >
               Presença digital construída para atrair mais clientes e aumentar seu faturamento, da estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
             <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
               >
                 Solicitar proposta
               </a>
             </div>
-            <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+            <p className="mt-5 text-xs tracking-[0.06em] text-foreground/70 uppercase">
               Resposta em até 1 dia útil · sem compromisso
             </p>
           </div>
