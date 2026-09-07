@@ -84,7 +84,7 @@ export function ContactForm() {
         role="status"
         className="corner-frame border border-secondary bg-card p-10 text-left"
       >
-        <p className="text-xs tracking-[0.1em] text-secondary uppercase glow-blue">
+        <p className="text-xs tracking-[0.1em] text-foreground/90 uppercase glow-blue">
           / mensagem recebida
         </p>
         <h3 className="mt-5 font-display text-2xl font-bold">Sinal captado.</h3>
