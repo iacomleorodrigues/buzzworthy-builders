@@ -341,7 +341,7 @@ function Index() {
         {/* Depoimentos */}
         <section className="scanlines relative border-b border-border" aria-label="Depoimentos">
           <div className="relative z-[2] mx-auto max-w-6xl px-6 py-24">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ depoimentos</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ depoimentos</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
@@ -361,12 +361,12 @@ function Index() {
                   }}
                   style={{ transitionDelay: `${i * 200}ms` }}
                 >
-                  <blockquote className="text-sm leading-relaxed text-foreground/90">
+                  <blockquote className="text-sm leading-relaxed text-foreground/95">
                     “{t.quote}”
                   </blockquote>
                   <figcaption className="mt-6 border-t border-border pt-5">
                     <p className="font-display text-sm font-bold text-primary">{t.name}</p>
-                    <p className="mt-1 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+                    <p className="mt-1 text-xs tracking-[0.08em] text-foreground/75 uppercase">
                       {t.role}
                     </p>
                   </figcaption>
