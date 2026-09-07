@@ -143,7 +143,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(-1)}
           disabled={atStart}
           aria-label="Anterior"
-          className="inline-flex h-11 w-11 items-center justify-center border border-border text-secondary transition-colors hover:border-primary/50 hover:text-primary disabled:opacity-30 disabled:hover:border-border disabled:hover:text-secondary"
+          className="inline-flex h-11 w-11 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors hover:border-primary hover:text-primary disabled:opacity-30 disabled:hover:border-foreground/30 disabled:hover:text-foreground/80"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -152,7 +152,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(1)}
           disabled={atEnd}
           aria-label="Próximo"
-          className="inline-flex h-11 w-11 items-center justify-center border border-border text-secondary transition-colors hover:border-primary/50 hover:text-primary disabled:opacity-30 disabled:hover:border-border disabled:hover:text-secondary"
+          className="inline-flex h-11 w-11 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors hover:border-primary hover:text-primary disabled:opacity-30 disabled:hover:border-foreground/30 disabled:hover:text-foreground/80"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
