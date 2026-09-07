@@ -379,7 +379,7 @@ function Index() {
         <section id="processo" className="relative border-b border-border">
           <div className="mx-auto grid max-w-6xl gap-16 px-6 py-28 md:grid-cols-[1fr_1.3fr]">
             <div>
-              <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ processo</p>
+              <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ processo</p>
               <h2
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
@@ -390,7 +390,7 @@ function Index() {
               
               <a
                 href="#contato"
-                className="neon-btn mt-10 inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-medium tracking-[0.15em] text-primary uppercase"
+                className="neon-btn mt-10 inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-medium tracking-[0.08em] text-primary uppercase"
               >
                 Começar pelo diagnóstico
               </a>
@@ -410,7 +410,7 @@ function Index() {
                   </span>
                   <div>
                     <h3 className="font-display text-lg font-bold tracking-wide uppercase">{s.k}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.v}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground/80">{s.v}</p>
                   </div>
                 </li>
               ))}
@@ -421,14 +421,14 @@ function Index() {
         <section id="contato" className="tunnel-grid relative overflow-hidden">
           <div className="relative z-[2] mx-auto max-w-3xl px-6 py-28 md:py-32">
             <div className="text-center">
-              <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ contato</p>
+              <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ contato</p>
               <h2
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
               >
                 <TypingEffect text="Vamos tirar seu projeto do papel" />
               </h2>
-              <p data-reveal className="reveal mt-6 leading-relaxed text-muted-foreground">
+              <p data-reveal className="reveal mt-6 leading-relaxed text-foreground/85">
                 Cada mês sem uma operação digital afiada é faturamento indo para o concorrente.
                 Abrimos poucas vagas por mês para começar projetos — conte o que você precisa e
                 devolvemos um plano com escopo, prazo e investimento.
