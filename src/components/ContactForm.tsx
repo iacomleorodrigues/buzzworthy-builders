@@ -111,7 +111,7 @@ export function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="nome" className="text-xs tracking-[0.08em] text-secondary uppercase">
+          <label htmlFor="nome" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
             Nome
           </label>
           <input
