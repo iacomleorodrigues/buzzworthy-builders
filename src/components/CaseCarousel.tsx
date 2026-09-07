@@ -244,7 +244,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(-1)}
           disabled={atStart}
           aria-label="Anterior"
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-border text-secondary transition-colors disabled:opacity-30"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors disabled:opacity-30"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
@@ -257,7 +257,7 @@ export function CaseCarousel() {
               aria-label={`Ir para ${item.title}`}
               aria-current={i === active}
               className={`h-1.5 rounded-full transition-all ${
-                i === active ? "w-6 bg-primary" : "w-1.5 bg-border"
+                i === active ? "w-6 bg-primary" : "w-1.5 bg-foreground/30"
               }`}
             />
           ))}
@@ -267,7 +267,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(1)}
           disabled={atEnd}
           aria-label="Próximo"
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-border text-secondary transition-colors disabled:opacity-30"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors disabled:opacity-30"
         >
           <ChevronRight className="h-4 w-4" />
         </button>
@@ -282,7 +282,7 @@ export function CaseCarousel() {
             aria-label={`Ir para ${item.title}`}
             aria-current={i === active}
             className={`h-1.5 rounded-full transition-all ${
-              i === active ? "w-8 bg-primary" : "w-2 bg-border hover:bg-secondary/60"
+              i === active ? "w-8 bg-primary" : "w-2 bg-foreground/30 hover:bg-foreground/55"
             }`}
           />
         ))}
