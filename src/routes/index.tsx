@@ -285,14 +285,14 @@ function Index() {
 
         <section id="servicos" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-28">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ serviços</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ serviços</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
             >
               <TypingEffect text="O que fazemos" />
             </h2>
-            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
+            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-foreground/85">
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
             </p>
             <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">
@@ -310,14 +310,14 @@ function Index() {
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
                   <div className="flex items-center justify-between">
-                    <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
-                    <s.icon className="h-5 w-5 text-secondary/50 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_8px_rgba(213,6,111,0.5)]" />
+                    <span className="font-display text-xs tracking-[0.1em] text-secondary">{s.n}</span>
+                    <s.icon className="h-5 w-5 text-secondary/70 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_6px_rgba(213,6,111,0.4)]" />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-bold transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)]">
                     {s.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-foreground/90">
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/80">{s.desc}</p>
+                  <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-foreground/95">
                     {s.benefit}
                   </p>
                 </article>
@@ -327,11 +327,11 @@ function Index() {
             <div data-reveal className="reveal mt-14 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
               >
                 Quero um plano para o meu negócio
               </a>
-              <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              <span className="text-xs tracking-[0.06em] text-foreground/70 uppercase">
                 Diagnóstico inicial sem custo
               </span>
             </div>
