@@ -38,7 +38,7 @@ const projetos = [
 ];
 
 const fieldClass =
-  "w-full border border-input bg-card px-5 py-4 text-sm text-foreground outline-none transition-shadow placeholder:text-muted-foreground focus:border-secondary focus:shadow-[var(--glow-blue)]";
+  "w-full border border-input bg-card px-5 py-4 text-sm text-foreground outline-none transition-shadow placeholder:text-foreground/50 focus:border-secondary focus:shadow-[var(--glow-blue)]";
 
 const WHATSAPP_NUMBER = "5511987983553";
 
