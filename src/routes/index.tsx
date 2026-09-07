@@ -445,7 +445,7 @@ function Index() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden">
         <a
           href="#contato"
-          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </a>
@@ -476,10 +476,10 @@ function Index() {
             <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.08em] text-foreground/80 uppercase">
             <Link
               to="/privacidade"
-              className="transition-colors hover:text-secondary"
+              className="transition-colors hover:text-foreground"
             >
               Política de Privacidade
             </Link>
@@ -487,7 +487,7 @@ function Index() {
               href="https://www.instagram.com/yedwebhub/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-muted-foreground transition-colors hover:text-primary hover:border-primary/40"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-foreground/80 transition-colors hover:text-primary hover:border-primary/40"
               aria-label="Instagram yedweb"
             >
               <svg
@@ -510,7 +510,7 @@ function Index() {
             </a>
           </div>
 
-          <span className="text-center text-xs tracking-[0.15em] text-muted-foreground">
+          <span className="text-center text-xs tracking-[0.06em] text-foreground/65">
             © {new Date().getFullYear()} yedweb · Todos os direitos reservados
           </span>
         </div>
