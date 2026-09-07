@@ -231,7 +231,7 @@ function Index() {
             <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
               >
                 Solicitar proposta
               </a>
@@ -327,7 +327,7 @@ function Index() {
             <div data-reveal className="reveal mt-14 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
               >
                 Quero um plano para o meu negócio
               </a>
@@ -445,7 +445,7 @@ function Index() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden">
         <a
           href="#contato"
-          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </a>
