@@ -192,7 +192,7 @@ function Index() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="block border-b border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase transition-colors hover:text-secondary"
+                className="block border-b border-border px-6 py-4 text-xs tracking-[0.08em] text-foreground/80 uppercase transition-colors hover:text-secondary"
               >
                 {l.label}
               </a>
