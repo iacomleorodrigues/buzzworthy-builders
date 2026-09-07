@@ -221,18 +221,18 @@ export function CaseCarousel() {
                 height={768}
                 className="h-44 w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 sm:h-52"
               />
-              <span className="absolute top-3 left-3 border border-secondary/40 bg-background/80 px-3 py-1 text-[0.6rem] tracking-[0.25em] text-secondary uppercase backdrop-blur">
+              <span className="absolute top-3 left-3 border border-secondary/40 bg-background/80 px-3 py-1 text-[0.6rem] tracking-[0.08em] text-secondary uppercase backdrop-blur">
                 {item.niche}
               </span>
             </div>
             <div className="p-5 sm:p-7">
-              <p className="text-[0.6rem] tracking-[0.3em] text-muted-foreground uppercase">
+              <p className="text-[0.6rem] tracking-[0.08em] text-foreground/75 uppercase">
                 {item.type}
               </p>
               <h3 className="mt-3 font-display text-base font-bold tracking-wide transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)] sm:text-lg">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.desc}</p>
             </div>
           </article>
         ))}
