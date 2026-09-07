@@ -142,9 +142,9 @@ function Index() {
           <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block">
             <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </a>
-          <nav className="hidden items-center gap-10 text-xs tracking-[0.25em] text-muted-foreground uppercase md:flex">
+          <nav className="hidden items-center gap-10 text-xs tracking-[0.08em] text-foreground/85 uppercase md:flex">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="transition-colors hover:text-secondary">
+              <a key={l.href} href={l.href} className="transition-colors hover:text-foreground">
                 {l.label}
               </a>
             ))}
@@ -152,7 +152,7 @@ function Index() {
           <div className="flex items-center gap-3">
             <a
               href="#contato"
-              className="neon-btn hidden border border-primary px-5 py-2 text-xs tracking-[0.2em] text-primary uppercase md:inline-flex"
+              className="neon-btn hidden border border-primary px-5 py-2 text-xs tracking-[0.08em] text-primary uppercase md:inline-flex"
             >
               Solicitar proposta
             </a>
