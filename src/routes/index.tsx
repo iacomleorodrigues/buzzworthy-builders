@@ -256,7 +256,7 @@ function Index() {
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
                     <CountUp end={m.v} />
                   </p>
-                  <p className="mt-3 text-xs tracking-[0.25em] text-muted-foreground uppercase">
+                  <p className="mt-3 text-xs tracking-[0.08em] text-foreground/80 uppercase">
                     {m.k}
                   </p>
                 </div>
