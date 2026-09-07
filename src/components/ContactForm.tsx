@@ -111,7 +111,7 @@ export function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="nome" className="text-xs tracking-[0.25em] text-secondary uppercase">
+          <label htmlFor="nome" className="text-xs tracking-[0.08em] text-secondary uppercase">
             Nome
           </label>
           <input
@@ -131,7 +131,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="contato" className="text-xs tracking-[0.25em] text-secondary uppercase">
+          <label htmlFor="contato" className="text-xs tracking-[0.08em] text-secondary uppercase">
             WhatsApp ou e-mail
           </label>
           <input
@@ -152,7 +152,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="projeto" className="text-xs tracking-[0.25em] text-secondary uppercase">
+        <label htmlFor="projeto" className="text-xs tracking-[0.08em] text-secondary uppercase">
           Tipo de projeto
         </label>
         <select
@@ -180,7 +180,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="mensagem" className="text-xs tracking-[0.25em] text-secondary uppercase">
+        <label htmlFor="mensagem" className="text-xs tracking-[0.08em] text-secondary uppercase">
           O que você precisa
         </label>
         <textarea
@@ -203,7 +203,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </button>
@@ -211,13 +211,13 @@ export function ContactForm() {
           href="https://wa.me/5511987983553"
           target="_blank"
           rel="noopener noreferrer"
-          className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+          className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.08em] text-secondary uppercase"
         >
           Falar no WhatsApp
         </a>
       </div>
 
-      <p className="text-xs tracking-[0.15em] text-muted-foreground uppercase">
+      <p className="text-xs tracking-[0.06em] text-foreground/65 uppercase">
         Resposta em até 1 dia útil · sem compromisso · seus dados não são compartilhados
       </p>
     </form>
