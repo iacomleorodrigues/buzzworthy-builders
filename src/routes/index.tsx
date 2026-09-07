@@ -267,14 +267,14 @@ function Index() {
 
         <section className="border-b border-border" aria-label="Portfólio">
           <div className="mx-auto max-w-6xl px-6 py-24">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ portfólio</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ portfólio</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
             >
               <TypingEffect text="Projetos Entregues" />
             </h2>
-            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
+            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-foreground/85">
               Landing pages e sites institucionais construídos para nichos diferentes, cada um com a mesma lógica: converter.
             </p>
             <div data-reveal className="reveal mt-12">
