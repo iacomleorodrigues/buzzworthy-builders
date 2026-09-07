@@ -143,7 +143,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(-1)}
           disabled={atStart}
           aria-label="Anterior"
-          className="inline-flex h-11 w-11 items-center justify-center border border-border text-secondary transition-colors hover:border-primary/50 hover:text-primary disabled:opacity-30 disabled:hover:border-border disabled:hover:text-secondary"
+          className="inline-flex h-11 w-11 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors hover:border-primary hover:text-primary disabled:opacity-30 disabled:hover:border-foreground/30 disabled:hover:text-foreground/80"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -152,7 +152,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(1)}
           disabled={atEnd}
           aria-label="Próximo"
-          className="inline-flex h-11 w-11 items-center justify-center border border-border text-secondary transition-colors hover:border-primary/50 hover:text-primary disabled:opacity-30 disabled:hover:border-border disabled:hover:text-secondary"
+          className="inline-flex h-11 w-11 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors hover:border-primary hover:text-primary disabled:opacity-30 disabled:hover:border-foreground/30 disabled:hover:text-foreground/80"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -221,18 +221,18 @@ export function CaseCarousel() {
                 height={768}
                 className="h-44 w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 sm:h-52"
               />
-              <span className="absolute top-3 left-3 border border-secondary/40 bg-background/80 px-3 py-1 text-[0.6rem] tracking-[0.25em] text-secondary uppercase backdrop-blur">
+              <span className="absolute top-3 left-3 border border-secondary/40 bg-background/80 px-3 py-1 text-[0.6rem] tracking-[0.08em] text-secondary uppercase backdrop-blur">
                 {item.niche}
               </span>
             </div>
             <div className="p-5 sm:p-7">
-              <p className="text-[0.6rem] tracking-[0.3em] text-muted-foreground uppercase">
+              <p className="text-[0.6rem] tracking-[0.08em] text-foreground/75 uppercase">
                 {item.type}
               </p>
               <h3 className="mt-3 font-display text-base font-bold tracking-wide transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)] sm:text-lg">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.desc}</p>
             </div>
           </article>
         ))}
@@ -244,7 +244,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(-1)}
           disabled={atStart}
           aria-label="Anterior"
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-border text-secondary transition-colors disabled:opacity-30"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors disabled:opacity-30"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
@@ -257,7 +257,7 @@ export function CaseCarousel() {
               aria-label={`Ir para ${item.title}`}
               aria-current={i === active}
               className={`h-1.5 rounded-full transition-all ${
-                i === active ? "w-6 bg-primary" : "w-1.5 bg-border"
+                i === active ? "w-6 bg-primary" : "w-1.5 bg-foreground/30"
               }`}
             />
           ))}
@@ -267,7 +267,7 @@ export function CaseCarousel() {
           onClick={() => scrollBy(1)}
           disabled={atEnd}
           aria-label="Próximo"
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-border text-secondary transition-colors disabled:opacity-30"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/30 text-foreground/80 transition-colors disabled:opacity-30"
         >
           <ChevronRight className="h-4 w-4" />
         </button>
@@ -282,7 +282,7 @@ export function CaseCarousel() {
             aria-label={`Ir para ${item.title}`}
             aria-current={i === active}
             className={`h-1.5 rounded-full transition-all ${
-              i === active ? "w-8 bg-primary" : "w-2 bg-border hover:bg-secondary/60"
+              i === active ? "w-8 bg-primary" : "w-2 bg-foreground/30 hover:bg-foreground/55"
             }`}
           />
         ))}

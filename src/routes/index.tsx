@@ -142,9 +142,9 @@ function Index() {
           <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block">
             <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </a>
-          <nav className="hidden items-center gap-10 text-xs tracking-[0.25em] text-muted-foreground uppercase md:flex">
+          <nav className="hidden items-center gap-10 text-xs tracking-[0.08em] text-foreground/85 uppercase md:flex">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="transition-colors hover:text-secondary">
+              <a key={l.href} href={l.href} className="transition-colors hover:text-foreground">
                 {l.label}
               </a>
             ))}
@@ -152,7 +152,7 @@ function Index() {
           <div className="flex items-center gap-3">
             <a
               href="#contato"
-              className="neon-btn hidden border border-primary px-5 py-2 text-xs tracking-[0.2em] text-primary uppercase md:inline-flex"
+              className="neon-btn hidden border border-primary px-5 py-2 text-xs tracking-[0.08em] text-primary uppercase md:inline-flex"
             >
               Solicitar proposta
             </a>
@@ -192,7 +192,7 @@ function Index() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="block border-b border-border px-6 py-4 text-xs tracking-[0.25em] text-muted-foreground uppercase transition-colors hover:text-secondary"
+                className="block border-b border-border px-6 py-4 text-xs tracking-[0.08em] text-foreground/80 uppercase transition-colors hover:text-secondary"
               >
                 {l.label}
               </a>
@@ -211,7 +211,7 @@ function Index() {
           <div className="relative z-[2] mx-auto w-full max-w-6xl px-6 py-12 md:py-24">
             <p
               data-reveal
-              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.35em] text-secondary uppercase glow-blue"
+              className="reveal mb-8 inline-flex items-center gap-3 border border-secondary/40 px-4 py-2 text-[0.65rem] tracking-[0.1em] text-secondary uppercase glow-blue"
             >
               <span className="inline-block h-1.5 w-1.5 animate-pulse bg-secondary" aria-hidden />
               AGÊNCIA DIGITAL · HIGH TECH, NO BULLSHIT
@@ -224,19 +224,19 @@ function Index() {
             </h1>
             <p
               data-reveal
-              className="reveal mt-7 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+              className="reveal mt-7 max-w-xl text-base leading-relaxed text-foreground/85 md:text-lg"
             >
               Presença digital construída para atrair mais clientes e aumentar seu faturamento, da estratégia à página publicada, sem improviso e sem discurso vazio.
             </p>
             <div data-reveal className="reveal mt-11 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
               >
                 Solicitar proposta
               </a>
             </div>
-            <p className="mt-5 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+            <p className="mt-5 text-xs tracking-[0.06em] text-foreground/70 uppercase">
               Resposta em até 1 dia útil · sem compromisso
             </p>
           </div>
@@ -256,7 +256,7 @@ function Index() {
                   <p className="font-display text-2xl font-bold text-primary glow-pink md:text-3xl">
                     <CountUp end={m.v} />
                   </p>
-                  <p className="mt-3 text-xs tracking-[0.25em] text-muted-foreground uppercase">
+                  <p className="mt-3 text-xs tracking-[0.08em] text-foreground/80 uppercase">
                     {m.k}
                   </p>
                 </div>
@@ -267,14 +267,14 @@ function Index() {
 
         <section className="border-b border-border" aria-label="Portfólio">
           <div className="mx-auto max-w-6xl px-6 py-24">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ portfólio</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ portfólio</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
             >
               <TypingEffect text="Projetos Entregues" />
             </h2>
-            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
+            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-foreground/85">
               Landing pages e sites institucionais construídos para nichos diferentes, cada um com a mesma lógica: converter.
             </p>
             <div data-reveal className="reveal mt-12">
@@ -285,14 +285,14 @@ function Index() {
 
         <section id="servicos" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-28">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ serviços</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ serviços</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
             >
               <TypingEffect text="O que fazemos" />
             </h2>
-            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-muted-foreground">
+            <p data-reveal className="reveal mt-6 max-w-xl leading-relaxed text-foreground/85">
               Seis frentes que se conectam. Você contrata a peça que falta ou a operação inteira.
             </p>
             <div className="mt-16 grid gap-px border border-border bg-border md:grid-cols-3">
@@ -310,14 +310,14 @@ function Index() {
                 >
                   <span className="absolute inset-x-0 top-0 h-px scale-x-0 bg-primary shadow-[var(--glow-pink)] transition-transform duration-300 group-hover:scale-x-100" aria-hidden />
                   <div className="flex items-center justify-between">
-                    <span className="font-display text-xs tracking-[0.3em] text-secondary">{s.n}</span>
-                    <s.icon className="h-5 w-5 text-secondary/50 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_8px_rgba(213,6,111,0.5)]" />
+                    <span className="font-display text-xs tracking-[0.1em] text-secondary">{s.n}</span>
+                    <s.icon className="h-5 w-5 text-secondary/70 transition-colors group-hover:text-primary group-hover:drop-shadow-[0_0_6px_rgba(213,6,111,0.4)]" />
                   </div>
                   <h3 className="mt-5 font-display text-xl font-bold transition-all group-hover:text-primary group-hover:[text-shadow:var(--text-glow-pink)]">
                     {s.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-foreground/90">
+                  <p className="mt-4 text-sm leading-relaxed text-foreground/80">{s.desc}</p>
+                  <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-foreground/95">
                     {s.benefit}
                   </p>
                 </article>
@@ -327,11 +327,11 @@ function Index() {
             <div data-reveal className="reveal mt-14 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+                className="neon-btn inline-flex items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
               >
                 Quero um plano para o meu negócio
               </a>
-              <span className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              <span className="text-xs tracking-[0.06em] text-foreground/70 uppercase">
                 Diagnóstico inicial sem custo
               </span>
             </div>
@@ -341,7 +341,7 @@ function Index() {
         {/* Depoimentos */}
         <section className="scanlines relative border-b border-border" aria-label="Depoimentos">
           <div className="relative z-[2] mx-auto max-w-6xl px-6 py-24">
-            <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ depoimentos</p>
+            <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ depoimentos</p>
             <h2
               data-reveal
               className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-4xl"
@@ -361,12 +361,12 @@ function Index() {
                   }}
                   style={{ transitionDelay: `${i * 200}ms` }}
                 >
-                  <blockquote className="text-sm leading-relaxed text-foreground/90">
+                  <blockquote className="text-sm leading-relaxed text-foreground/95">
                     “{t.quote}”
                   </blockquote>
                   <figcaption className="mt-6 border-t border-border pt-5">
                     <p className="font-display text-sm font-bold text-primary">{t.name}</p>
-                    <p className="mt-1 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+                    <p className="mt-1 text-xs tracking-[0.08em] text-foreground/75 uppercase">
                       {t.role}
                     </p>
                   </figcaption>
@@ -379,7 +379,7 @@ function Index() {
         <section id="processo" className="relative border-b border-border">
           <div className="mx-auto grid max-w-6xl gap-16 px-6 py-28 md:grid-cols-[1fr_1.3fr]">
             <div>
-              <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ processo</p>
+              <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ processo</p>
               <h2
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
@@ -390,7 +390,7 @@ function Index() {
               
               <a
                 href="#contato"
-                className="neon-btn mt-10 inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-medium tracking-[0.15em] text-primary uppercase"
+                className="neon-btn mt-10 inline-flex items-center justify-center border border-primary px-7 py-4 text-sm font-medium tracking-[0.08em] text-primary uppercase"
               >
                 Começar pelo diagnóstico
               </a>
@@ -410,7 +410,7 @@ function Index() {
                   </span>
                   <div>
                     <h3 className="font-display text-lg font-bold tracking-wide uppercase">{s.k}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.v}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground/80">{s.v}</p>
                   </div>
                 </li>
               ))}
@@ -421,14 +421,14 @@ function Index() {
         <section id="contato" className="tunnel-grid relative overflow-hidden">
           <div className="relative z-[2] mx-auto max-w-3xl px-6 py-28 md:py-32">
             <div className="text-center">
-              <p className="text-xs tracking-[0.4em] text-secondary uppercase">/ contato</p>
+              <p className="text-xs tracking-[0.1em] text-secondary uppercase">/ contato</p>
               <h2
                 data-reveal
                 className="reveal mt-6 font-display text-3xl font-bold tracking-tight md:text-5xl"
               >
                 <TypingEffect text="Vamos tirar seu projeto do papel" />
               </h2>
-              <p data-reveal className="reveal mt-6 leading-relaxed text-muted-foreground">
+              <p data-reveal className="reveal mt-6 leading-relaxed text-foreground/85">
                 Cada mês sem uma operação digital afiada é faturamento indo para o concorrente.
                 Abrimos poucas vagas por mês para começar projetos — conte o que você precisa e
                 devolvemos um plano com escopo, prazo e investimento.
@@ -445,7 +445,7 @@ function Index() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 backdrop-blur-md md:hidden">
         <a
           href="#contato"
-          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </a>
@@ -476,10 +476,10 @@ function Index() {
             <img src={logoHorizontal.url} alt="yedweb" className="h-10 w-auto object-contain" />
           </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.2em] text-muted-foreground uppercase">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs tracking-[0.08em] text-foreground/80 uppercase">
             <Link
               to="/privacidade"
-              className="transition-colors hover:text-secondary"
+              className="transition-colors hover:text-foreground"
             >
               Política de Privacidade
             </Link>
@@ -487,7 +487,7 @@ function Index() {
               href="https://www.instagram.com/yedwebhub/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-muted-foreground transition-colors hover:text-primary hover:border-primary/40"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-foreground/80 transition-colors hover:text-primary hover:border-primary/40"
               aria-label="Instagram yedweb"
             >
               <svg
@@ -510,7 +510,7 @@ function Index() {
             </a>
           </div>
 
-          <span className="text-center text-xs tracking-[0.15em] text-muted-foreground">
+          <span className="text-center text-xs tracking-[0.06em] text-foreground/65">
             © {new Date().getFullYear()} yedweb · Todos os direitos reservados
           </span>
         </div>

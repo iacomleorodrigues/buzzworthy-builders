@@ -38,7 +38,7 @@ const projetos = [
 ];
 
 const fieldClass =
-  "w-full border border-input bg-card px-5 py-4 text-sm text-foreground outline-none transition-shadow placeholder:text-muted-foreground focus:border-secondary focus:shadow-[var(--glow-blue)]";
+  "w-full border border-input bg-card px-5 py-4 text-sm text-foreground outline-none transition-shadow placeholder:text-foreground/60 focus:border-secondary focus:shadow-[var(--glow-blue)]";
 
 const WHATSAPP_NUMBER = "5511987983553";
 
@@ -84,18 +84,18 @@ export function ContactForm() {
         role="status"
         className="corner-frame border border-secondary bg-card p-10 text-left"
       >
-        <p className="text-xs tracking-[0.35em] text-secondary uppercase glow-blue">
+        <p className="text-xs tracking-[0.1em] text-foreground/90 uppercase glow-blue">
           / mensagem recebida
         </p>
         <h3 className="mt-5 font-display text-2xl font-bold">Sinal captado.</h3>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-4 text-sm leading-relaxed text-foreground/85">
           Retornamos em até 1 dia útil com os próximos passos. Se preferir acelerar, chame no
           WhatsApp.
         </p>
         <button
           type="button"
           onClick={() => setSent(false)}
-          className="neon-btn mt-8 border border-primary px-6 py-3 text-xs tracking-[0.2em] text-primary uppercase"
+          className="neon-btn mt-8 border border-primary px-6 py-3 text-xs tracking-[0.08em] text-primary uppercase"
         >
           Enviar outra mensagem
         </button>
@@ -111,7 +111,7 @@ export function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="nome" className="text-xs tracking-[0.25em] text-secondary uppercase">
+          <label htmlFor="nome" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
             Nome
           </label>
           <input
@@ -131,7 +131,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="contato" className="text-xs tracking-[0.25em] text-secondary uppercase">
+          <label htmlFor="contato" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
             WhatsApp ou e-mail
           </label>
           <input
@@ -152,7 +152,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="projeto" className="text-xs tracking-[0.25em] text-secondary uppercase">
+        <label htmlFor="projeto" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
           Tipo de projeto
         </label>
         <select
@@ -180,7 +180,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="mensagem" className="text-xs tracking-[0.25em] text-secondary uppercase">
+        <label htmlFor="mensagem" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
           O que você precisa
         </label>
         <textarea
@@ -203,7 +203,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.15em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </button>
@@ -211,13 +211,13 @@ export function ContactForm() {
           href="https://wa.me/5511987983553"
           target="_blank"
           rel="noopener noreferrer"
-          className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.15em] text-secondary uppercase"
+          className="neon-btn inline-flex items-center justify-center border border-foreground/30 px-8 py-4 text-sm font-medium tracking-[0.08em] text-foreground/90 uppercase"
         >
           Falar no WhatsApp
         </a>
       </div>
 
-      <p className="text-xs tracking-[0.15em] text-muted-foreground uppercase">
+      <p className="text-xs tracking-[0.06em] text-foreground/65 uppercase">
         Resposta em até 1 dia útil · sem compromisso · seus dados não são compartilhados
       </p>
     </form>
