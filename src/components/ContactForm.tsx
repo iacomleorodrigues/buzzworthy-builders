@@ -131,7 +131,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="contato" className="text-xs tracking-[0.08em] text-secondary uppercase">
+          <label htmlFor="contato" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
             WhatsApp ou e-mail
           </label>
           <input
@@ -152,7 +152,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="projeto" className="text-xs tracking-[0.08em] text-secondary uppercase">
+        <label htmlFor="projeto" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
           Tipo de projeto
         </label>
         <select
@@ -180,7 +180,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="mensagem" className="text-xs tracking-[0.08em] text-secondary uppercase">
+        <label htmlFor="mensagem" className="text-xs tracking-[0.08em] text-foreground/90 uppercase">
           O que você precisa
         </label>
         <textarea
@@ -211,7 +211,7 @@ export function ContactForm() {
           href="https://wa.me/5511987983553"
           target="_blank"
           rel="noopener noreferrer"
-          className="neon-btn inline-flex items-center justify-center border border-secondary px-8 py-4 text-sm font-medium tracking-[0.08em] text-secondary uppercase"
+          className="neon-btn inline-flex items-center justify-center border border-foreground/30 px-8 py-4 text-sm font-medium tracking-[0.08em] text-foreground/90 uppercase"
         >
           Falar no WhatsApp
         </a>
