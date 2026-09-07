@@ -203,7 +203,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-primary-foreground uppercase shadow-[var(--glow-pink)]"
+          className="neon-btn inline-flex flex-1 items-center justify-center bg-primary px-8 py-4 text-sm font-medium tracking-[0.08em] text-white uppercase shadow-[var(--glow-pink)]"
         >
           Solicitar proposta
         </button>
