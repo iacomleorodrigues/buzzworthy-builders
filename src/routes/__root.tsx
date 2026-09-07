@@ -133,6 +133,38 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  // Após um novo deploy, o navegador pode ter em cache uma página que aponta
+  // para arquivos antigos que já não existem. Nesse caso, recarrega uma vez.
+  useEffect(() => {
+    const isChunkError = (message?: string) =>
+      !!message &&
+      (message.includes("Failed to fetch dynamically imported module") ||
+        message.includes("error loading dynamically imported module") ||
+        message.includes("Importing a module script failed"));
+
+    const reloadOnce = () => {
+      const key = "app-chunk-reloaded";
+      if (sessionStorage.getItem(key)) return;
+      sessionStorage.setItem(key, "1");
+      window.location.reload();
+    };
+
+    const onError = (event: ErrorEvent) => {
+      if (isChunkError(event.message)) reloadOnce();
+    };
+    const onRejection = (event: PromiseRejectionEvent) => {
+      const reason = event.reason;
+      if (isChunkError(reason instanceof Error ? reason.message : String(reason))) reloadOnce();
+    };
+
+    window.addEventListener("error", onError);
+    window.addEventListener("unhandledrejection", onRejection);
+    return () => {
+      window.removeEventListener("error", onError);
+      window.removeEventListener("unhandledrejection", onRejection);
+    };
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
