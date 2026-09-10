@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Site YedWeb
+
+crie uma landing page para minha agência de serviços de marketing, criação de sites, landing pages, social media, treinamentos, consultorias, mentorias etc
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://buzzworthy-builders.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a1c807bf-cd99-4a07-9bec-18bb1ea01bc5).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
